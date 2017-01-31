@@ -6,7 +6,7 @@ export default React.createClass({
   render () {
     return (
       <header className="header">
-        <h1 className="headerText"> Justin </h1>
+        <h1 className="headerText"> Retro Pigskin </h1>
       </header>
     )
   }
