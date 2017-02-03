@@ -6,10 +6,20 @@ export default React.createClass({
 
     return(
       <section className="title__section">
-        <p className="image__streamer"> RETRO PIGSKIN </p>
-        <img src="/styles/Elway-Davis.jpg" className="photo"></img>
+          <iframe className="movie" width="500" height="315" src="https://www.youtube.com/embed/Lx8FByIE0cw?rel=0" frameBorder="0" allowFullScreen></iframe>
         <div className="video__carousel">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/pcwsCS9nD3g" frameborder="0" allowfullscreen></iframe>
+          <a href="https://youtu.be/pcwsCS9nD3g">
+            <img src="/styles/Bucs-Rams2000.jpg" className="video__image"></img>
+          </a>
+            <h3 className="video__details"> Bucs vs Rams 2000 </h3>
+          <a href="https://youtu.be/UWPvuF1cjx0">
+            <img src="/styles/Falcons-Packers2002.jpg" className="video__image"></img>
+          </a>
+            <h3 className="video__details"> Falcons vs Packers 2002 </h3>
+          <a href="https://youtu.be/omphQiZ3hAk">
+            <img src="/styles/Vikings-Boys1998.jpg" className="video__image"></img>
+          </a>
+            <h3 className="video__details"> Vikings vs Cowboys 1998 </h3>
         </div>
       </section>
     )

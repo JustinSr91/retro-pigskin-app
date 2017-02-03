@@ -61,4 +61,32 @@ Desired Outcome
 
   • Responsive view
 
-  • Roster API data for each video 
+  • Roster API data for each video
+
+
+<!-- ToDo
+
+  Home Page
+
+[] Links
+  [] home
+  [] search
+
+[] Photo section
+  [] style for 478px
+
+[] NFL video section
+  [x] add three videos to section
+  [] add YouTube link to each video
+  [] style video image
+
+
+
+
+
+
+
+
+
+
+-->
