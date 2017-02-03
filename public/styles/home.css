@@ -7,6 +7,7 @@
 
 .headerText {
   color: #FB9B2A;
+  margin-left: 20px;
 }
 
 .image__streamer {
@@ -24,12 +25,12 @@
   width: 500px;
 }
 
-.main__photo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 30px;
-  width: 500px;
+.mainVideo__details {
+
+}
+
+.mainVideo__title {
+  text-align: center;
 }
 
 .movie {
@@ -37,8 +38,6 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 30px;
-  width: 500px;
 }
 
 .navLink {
@@ -46,6 +45,17 @@
   display: inline;
   margin-right: 20px;
   text-decoration: none;
+}
+
+.tagline {
+  text-align: center;
+  margin: 0;
+  padding-top: 19px;
+}
+
+.tagline__title {
+  color: #FB9B2A;
+  text-align: center;
 }
 
 .title__section {
