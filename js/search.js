@@ -4,26 +4,38 @@ import { Link } from 'react-router'
 export default React.createClass({
   render() {
     return (
-      <section>
-        <h1 className="projectsHeading"> Latest Projects </h1>
+      <section className="search__section">
+        <h1 className="search__heading"> Search Games by Year </h1>
         <a href="https://github.com/JustinSr91/assignments/tree/master/3.3-accordion"
            target="_blank"
-           className="projectLink">
-          <li className="projectList"> NBA Accordion </li>
+           className="group__link">
+          <li className="game__year"> 1998 </li>
         </a>
-        <p> Once clicked, the Accordion image slides out, and text that provides details about the image is shown. </p>
         <a href="https://github.com/JustinSr91/assignments/tree/master/1.4"
            target="_blank"
-           className="projectLink">
-          <li className="projectList"> YouTube Mock </li>
+           className="group__link">
+          <li className="game__year"> 1999 </li>
         </a>
-        <p> Here I created a non-functioning mock version of YouTube. The styling of the page matches the authentic YouTube website. </p>
         <a href="https://github.com/JustinSr91/assignments/tree/master/4.3-refactor-calculator"
            target="_blank"
-           className="projectLink">
-          <li className="projectList"> Calculator App </li>
+           className="group__link">
+          <li className="game__year"> 2000 </li>
         </a>
-        <p> Here I created my own version of a Calculator, using React JS functionality. </p>
+        <a href="https://github.com/JustinSr91/assignments/tree/master/3.3-accordion"
+           target="_blank"
+           className="group__link">
+          <li className="game__year"> 2001 </li>
+        </a>
+        <a href="https://github.com/JustinSr91/assignments/tree/master/3.3-accordion"
+           target="_blank"
+           className="group__link">
+          <li className="game__year"> 2002 </li>
+        </a>
+        <a href="https://github.com/JustinSr91/assignments/tree/master/3.3-accordion"
+           target="_blank"
+           className="group__link">
+          <li className="game__year"> 2003 </li>
+        </a>
       </section>
     )
   }

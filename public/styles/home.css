@@ -1,4 +1,15 @@
 
+.game__year {
+  color: #FB9B2A;
+  list-style: none;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.group__link {
+  text-decoration: none;
+}
+
 .header {
   display: inline-block;
   margin-right: 30px;
@@ -26,11 +37,21 @@
 }
 
 .mainVideo__details {
-
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  text-align: center;
+  width: 500px;
 }
 
 .mainVideo__title {
+  display: table;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+  width: 600px;
 }
 
 .movie {
@@ -47,6 +68,17 @@
   text-decoration: none;
 }
 
+.search__heading {
+  text-align: center;
+}
+
+.search__section {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  width: 400px;
+}
+
 .tagline {
   text-align: center;
   margin: 0;
@@ -55,6 +87,10 @@
 
 .tagline__title {
   color: #FB9B2A;
+  display: list-item;
+  font-size: 1.5em;
+  margin-top: 0;
+  padding-top: 30px;
   text-align: center;
 }
 
@@ -68,10 +104,20 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
-  width: 400px;
+  width: 600px;
 }
 
 .video__details {
+}
+
+.video__image {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 30px;
+  width: 200px;
+}
+
+.video__title {
   color: #FB9B2A;
   display: inline-block;
   font-weight: 100;
@@ -80,13 +126,6 @@
   text-align: left;
   vertical-align: top;
   width: 200px;
-}
-
-.video__image {
-  display: inline-block;
-  margin-left: 10px;
-  margin-top: 30px;
-  width: 150px;
 }
 
 @media only screen and (min-width: 478px) {
