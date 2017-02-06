@@ -69,16 +69,18 @@ Desired Outcome
   Home Page
 
 [] Links
-  [] home
-  [] search
+  [x] home
+  [x] search
 
-[] Photo section
-  [] style for 478px
+[] Featured video section
+  [x] style for 478px
+  [] add "show more" dropdown for video details
 
 [] NFL video section
   [x] add three videos to section
-  [] add YouTube link to each video
-  [] style video image
+  [x] add YouTube link to each video
+  [x] style video image
+
 
 
 
