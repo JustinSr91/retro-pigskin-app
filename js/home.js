@@ -3,8 +3,24 @@ import { Link } from 'react-router'
 import Firebase from 'firebase'
 
 export default React.createClass({
+  getInitialState: function() {
+    return {
+      text:"",
+      expanded: false
+    };
+  },
+  toggleButtonText(e) {
+    this.setState({
+      expanded: !this.state.expanded
+    })
+    if (this.state.expanded) {
+      this.refs.hiddenText.className = "hideDetails"
+    }
+    else {
+      this.refs.hiddenText.className = "showDetails"
+    }
+  },
   render(){
-
     return(
       <section className="title__section">
         <div className="main__container">
@@ -15,11 +31,11 @@ export default React.createClass({
                     allowFullScreen>
             </iframe>
             <h2 className="mainVideo__title"> 2000 NFC Championship Game - Saints vs Rams </h2>
-            <p className="mainVideo__details"> An action packed NFC Wild Card match-up pitting "The Greatest Show On Turf" vs."The Who Dat Nation" from the 2000 NFL playoffs.
-              <label for="show-all"></label>
-            <button type="button" className="show-all"> Show More </button>
-            <div className="more-text"> Kurt Warner and the St. Louis Rams battle Aaron Brooks, Ricky Williams and the New Orleans Saints from the Superdome in what would turn out to be the Saints first ever playoff win. </div></p>
-        </div>
+            <div className="mainVideo__details"> An action packed NFC Wild Card match-up pitting "The Greatest Show On Turf" vs."The Who Dat Nation" from the 2000 NFL playoffs.
+            </div>
+            <div className="hideDetails" ref="hiddenText"> Kurt Warner and the St. Louis Rams battle Aaron Brooks, Ricky Williams and the New Orleans Saints from the Superdome in what would turn out to be the Saints first ever playoff win. </div>
+              <button type="button" className="transition__button"
+                      onClick={this.toggleButtonText}> {this.state.expanded ? "SHOW LESS" : "SHOW MORE"}</button>
         <div className="secondary__container">
           <div className="content__bundle">
             <a href="https://youtu.be/pcwsCS9nD3g">
@@ -52,7 +68,8 @@ export default React.createClass({
               </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
     )
     }
-  })
+})

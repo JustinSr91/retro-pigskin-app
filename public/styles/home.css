@@ -22,13 +22,13 @@
 }
 
 .header {
+  color: darkred;
   display: inline-block;
   margin-right: 30px;
   text-align: left;
 }
 
 .headerText {
-  color: #FB9B2A;
   margin-left: 20px;
 }
 
@@ -65,6 +65,7 @@
 }
 
 .mainVideo__title {
+  color: darkred;
   display: table;
   margin: 0 auto 5px auto;
   text-align: center;
@@ -72,11 +73,21 @@
 }
 
 /* Read More Dropdown */
-.more-text {
+.hideDetails {
   display: none;
 }
 
-.show-all {
+.showDetails {
+  display: table;
+  margin: 0 auto 0 auto;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 500px;
+  position: relative;
+}
+
+
+.transition__button {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -84,20 +95,6 @@
   background: white;
   border: none;
   margin-top: 10px;
-}
-
-.show-all:checked ~ .more-text {
-  display: block;
-}
-
-label::before {
-  content: "Show More";
-}
-
-label {
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
 }
 
 /**/
@@ -109,8 +106,10 @@ label {
 }
 
 nav {
-  border-bottom-style: groove;
-  border-bottom-width: thin;
+  color: darkred;
+  border-bottom-style: ridge;
+  border-bottom-width: 1px;
+  border-color: #FB9B2A;
 }
 
 .navLink {
@@ -133,8 +132,9 @@ nav {
 
 .secondary__container {
   background: white;
-  border-style: groove;
-  border-width: 2px;
+  border-color: #FB9B2A;
+  border-style: ridge;
+  border-width: 1px;
   display: table;
   margin-left: auto;
   margin-right: auto;
@@ -153,6 +153,7 @@ nav {
   color: #FB9B2A;
   display: block;
   font-size: 1.5em;
+  font-weight: 100;
   margin: 0 auto;
   padding-bottom: 15px;
   padding-top: 15px;
@@ -178,7 +179,7 @@ nav {
   margin-left: auto;
   margin-top: 30px;
   margin-right: auto;
-  width: 150px;
+  width: 180px;
 }
 
 .video__title {
