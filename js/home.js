@@ -3,11 +3,44 @@ import { Link } from 'react-router'
 import Firebase from 'firebase'
 
 export default React.createClass({
-  getInitialState: function() {
+  getInitialState() {
     return {
       text:"",
-      expanded: false
+      expanded: false,
+      videoURL: ""
     };
+  },
+  componentWillMount: function() {
+    this.setState({
+      videoURL: 'gs://retro-pigskin-app.appspot.com/videos/pack-falcons.mp4'})
+    var storage = firebase.storage();
+    var storageRef = firebase.storage().ref();
+    var videosRef = storageRef.child('videos');
+    var fileName = 'pack-falcons.mp4';
+    var falconsRef = videosRef.child(fileName);
+    var path = falconsRef.fullPath
+    var name = falconsRef.name
+    var videosRef = falconsRef.parent;
+
+    var pathReference = storage.ref('videos/pack-falcons.mp4');
+    var gsReference = storage.refFromURL('gs://retro-pigskin-app.appspot.com/videos/pack-falcons.mp4')
+    var httpsReference = storage.refFromURL('https://firebasestorage.googleapis.com/v0/b/retro-pigskin-app.appspot.com/o/videos%2Fpack-falcons.mp4?alt=media&token=ccdc6e75-c571-4678-b8c0-969d441ac06a');
+
+    storageRef.child('videos/pack-falcons.mp4').getDownloadURL().then(function(url) {
+      var video = document.getElementById('myVideo');
+      video.src = url;
+    }).catch(function(error){
+      switch (error.code) {
+        case 'storage/object_not_found':
+          break;
+
+      case 'storage/unauthorized':
+        break;
+
+      case 'storage/canceled':
+        break;
+      }
+    });
   },
   toggleButtonText(e) {
     this.setState({
@@ -25,11 +58,7 @@ export default React.createClass({
       <section className="title__section">
         <div className="main__container">
           <h1 className="tagline__title"> Featured Game </h1>
-            <iframe className="movie" width="600" height="315"
-                    src="https://www.youtube.com/embed/Lx8FByIE0cw?rel=0"
-                    frameBorder="0"
-                    allowFullScreen>
-            </iframe>
+            <video src={ this.state.videoURL } className="movie"></video>
             <h2 className="mainVideo__title"> 2000 NFC Championship Game - Saints vs Rams </h2>
             <div className="mainVideo__details"> An action packed NFC Wild Card match-up pitting "The Greatest Show On Turf" vs."The Who Dat Nation" from the 2000 NFL playoffs.
             </div>

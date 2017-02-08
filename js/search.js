@@ -2,40 +2,39 @@ import React from 'react'
 import { Link } from 'react-router'
 
 export default React.createClass({
-  render() {
+  getInitialState() {
+    return {
+    }
+  },
+  render(){
+  //   const searchDetails = this.props.route.data;
+  //   const yearGroup = search.map((year) => {
+  //     return (
+  //       <Link to={"/search/"+searchDetails.id}
+  //         className="game__year"
+  //         key={searchDetails.id}>
+  //         {searchDetails.year}
+  //       </Link>
+  //     )
+  //   }
+  // //FIXME: Use this.state.years.map() to *iterate* over the years object
+  // // Use <Link to link to /Search/:year - something like: <Link to={"/Search/" + year.year}/>
+  // <Years year={ this.state.years.map } />
+  console.log("DATA:" + this.props.route.data)
     return (
       <section className="search__section">
         <h1 className="search__heading"> Search Games by Year </h1>
-        <a href="https://github.com/JustinSr91/assignments/tree/master/3.3-accordion"
-           target="_blank"
-           className="group__link">
-          <li className="game__year"> 1998 </li>
-        </a>
-        <a href="https://github.com/JustinSr91/assignments/tree/master/1.4"
-           target="_blank"
-           className="group__link">
-          <li className="game__year"> 1999 </li>
-        </a>
-        <a href="https://github.com/JustinSr91/assignments/tree/master/4.3-refactor-calculator"
-           target="_blank"
-           className="group__link">
-          <li className="game__year"> 2000 </li>
-        </a>
-        <a href="https://github.com/JustinSr91/assignments/tree/master/3.3-accordion"
-           target="_blank"
-           className="group__link">
-          <li className="game__year"> 2001 </li>
-        </a>
-        <a href="https://github.com/JustinSr91/assignments/tree/master/3.3-accordion"
-           target="_blank"
-           className="group__link">
-          <li className="game__year"> 2002 </li>
-        </a>
-        <a href="https://github.com/JustinSr91/assignments/tree/master/3.3-accordion"
-           target="_blank"
-           className="group__link">
-          <li className="game__year"> 2003 </li>
-        </a>
+        <div className="yearContainer">
+          { Object.keys(this.props.route.data).map( (year, i) => {
+            return (
+              <div key={i}>
+                <h1>{year}</h1>
+                <p>{this.props.route.data[year].summary}</p>
+                <Link to={"/Search/" + year}>{year}</Link>
+              </div>
+            )
+          })}
+        </div>
       </section>
     )
   }

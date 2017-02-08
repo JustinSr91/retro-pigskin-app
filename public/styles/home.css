@@ -83,18 +83,17 @@
   padding-bottom: 10px;
   text-align: center;
   width: 500px;
-  position: relative;
 }
 
 
 .transition__button {
   display: block;
+  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   background: white;
   border: none;
-  margin-top: 10px;
 }
 
 /**/

@@ -68,20 +68,23 @@ Desired Outcome
 
   Home Page
 
-[] Links
+[x] Links
   [x] home
   [x] search
 
-[] Featured video section
+[x] Featured video section
   [x] style for 478px
-  [] add "show more" dropdown for video details
+  [x] add "show more" dropdown for video details
 
-[] NFL video section
+[x] NFL video section
   [x] add three videos to section
   [x] add YouTube link to each video
   [x] style video image
 
+[] Create "year" component
+  [] set up Route to year page
 
+[] Create HTML inside Render method 
 
 
 
