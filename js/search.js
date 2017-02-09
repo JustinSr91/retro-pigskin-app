@@ -28,8 +28,6 @@ export default React.createClass({
           { Object.keys(this.props.route.data).map( (year, i) => {
             return (
               <div key={i}>
-                <h1>{year}</h1>
-                <p>{this.props.route.data[year].summary}</p>
                 <Link to={"/Search/" + year}>{year}</Link>
               </div>
             )
