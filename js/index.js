@@ -11,7 +11,7 @@ var data = {
     'summary': "1998 was a very good year.",
     'videos': [
       {
-        youtubeURL: '',
+        youtubeURL: 'https://youtu.be/omphQiZ3hAk',
         imageURL: "/styles/Vikings-Boys1998.jpg",
         title: 'Vikings vs Cowboys',
         description: 'Test'

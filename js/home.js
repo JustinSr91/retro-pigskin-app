@@ -27,7 +27,7 @@ export default React.createClass({
           <h1 className="tagline__title"> Featured Game </h1>
           <iframe className="movie" width="560" height="315"
                   src="https://www.youtube.com/embed/Lx8FByIE0cw?rel=0"
-                  frameborder="0" allowfullscreen>
+                  frameBorder="0" allowFullScreen>
           </iframe>
             <h2 className="mainVideo__title"> 2000 NFC Championship Game - Saints vs Rams </h2>
             <div className="mainVideo__details"> An action packed NFC Wild Card match-up pitting "The Greatest Show On Turf" vs."The Who Dat Nation" from the 2000 NFL playoffs.

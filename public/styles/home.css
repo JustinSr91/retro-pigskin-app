@@ -48,11 +48,15 @@
 }
 
 .main__container {
-  width: 60%;
+  background: white;
+  border-color: #FB9B2A;
+  border-left-style: ridge;
+  border-right-style: ridge;
+  border-width: 1px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
-  background: white;
+  width: 60%;
 }
 
 
