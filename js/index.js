@@ -221,28 +221,34 @@ var data = {
     'summary': "Games from the 2004  NFL Season",
     'videos': [
       {
-        youtubeURL: '',
-        imageURL: "/styles/.jpg",
-        title: '',
-        description: '|Full Game'
+        youtubeURL: 'https://youtu.be/Xf68qnFDg54',
+        imageURL: "/styles/Eagles-Patriots2004.jpg",
+        title: 'Eagles vs Patriots',
+        description: 'Super Bowl XXXIX | Full Game'
       },
       {
-        youtubeURL: '',
-        imageURL: "/styles/.jpg",
-        title: '',
-        description: '| Full Game'
+        youtubeURL: 'https://youtu.be/k-sjmcGycwo',
+        imageURL: "/styles/Panthers-Eagles2004.jpg",
+        title: 'Panthers vs Eagles',
+        description: '2004 NFC Championship Game | Full Game'
       },
       {
-        youtubeURL: '',
-        imageURL: "/styles/.jpg",
-        title: '',
-        description: '| Full Game'
+        youtubeURL: 'https://youtu.be/XIYpaHCvqpg',
+        imageURL: "/styles/Eagles-Packers2004.jpg",
+        title: 'Eagles vs Packers',
+        description: 'Week 13 | Pt. 1'
       },
       {
-        youtubeURL: '',
-        imageURL: "/styles/.jpg",
-        title: '',
-        description: '| Full Game'
+        youtubeURL: 'https://youtu.be/z1yxctE7h3s',
+        imageURL: "/styles/Phi-Dal2004.jpg",
+        title: 'Cowboys vs Eagles',
+        description: 'Week 10 | Full Game'
+      },
+      {
+        youtubeURL: 'https://youtu.be/Ktvtd_MOrgs',
+        imageURL: "/styles/Eagles-Ravens2004.jpg",
+        title: 'Ravens vs Eagles',
+        description: 'Week 8 | Full Game'
       }
     ]
   }
