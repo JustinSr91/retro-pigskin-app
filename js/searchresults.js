@@ -17,6 +17,9 @@ export default React.createClass({
                     </a>
                     <h3 className="video__title">{video.title}
                     </h3>
+                      <p className="video__details__search">
+                        {video.description}
+                      </p>
                   </li>
                   )
               })}
