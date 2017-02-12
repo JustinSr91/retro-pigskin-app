@@ -160,13 +160,13 @@ var data = {
         youtubeURL: 'https://youtu.be/ZvMqK0yNdgE',
         imageURL: "/styles/Falcons-Eagles2002.jpg",
         title: 'Falcons vs Eagles',
-        description: '2002 NFC Divisional Playoff Game | Full Game'
+        description: '2002 NFC Divisional Playoff Matchup | Full Game'
       },
       {
         youtubeURL: 'https://youtu.be/UWPvuF1cjx0',
         imageURL: "/styles/Falcons-Packers2002.jpg",
         title: 'Falcons vs Packers',
-        description: '2002 Wild Card Game | Full Game'
+        description: '2002 Wild Card Playoff Matchup | Full Game'
       }
     ]
   },
@@ -174,28 +174,46 @@ var data = {
     'summary': "Games from the 2003 NFL Season ",
     'videos': [
       {
-        youtubeURL: '',
-        imageURL: "/styles/.jpg",
-        title: '',
-        description: '| Full Game'
+        youtubeURL: 'https://youtu.be/OjaQG0WoXH0',
+        imageURL: "/styles/Pats-Panthers2003.jpg",
+        title: 'Patriots vs Panthers',
+        description: 'Super Bowl XXXVIII | Full Game'
       },
       {
-        youtubeURL: '',
-        imageURL: "/styles/.jpg",
-        title: '',
-        description: '| Full Game'
+        youtubeURL: 'https://youtu.be/2Pe_O8eNn5A',
+        imageURL: "/styles/Panthers-Rams2003.jpg",
+        title: 'Panthers vs Rams',
+        description: '2003 NFC Divisional Playoff Matchup | Full Game'
       },
       {
-        youtubeURL: '',
-        imageURL: "/styles/.jpg",
-        title: '',
-        description: '| Full Game'
+        youtubeURL: 'https://youtu.be/CaisdMT2brw',
+        imageURL: "/styles/Packers-Raiders2003.jpg",
+        title: 'Packers vs Raiders',
+        description: '"Brett Favre Legendary Performance", Week 16 | Full Game'
       },
       {
-        youtubeURL: '',
-        imageURL: "/styles/.jpg",
-        title: '',
-        description: '| Full Game'
+        youtubeURL: 'https://youtu.be/oD9RZmQPk6Y',
+        imageURL: "/styles/Titans-Ravens2003.jpg",
+        title: 'Titans vs Ravens',
+        description: '2003 AFC Wild Card Matchup | Full Game'
+      },
+      {
+        youtubeURL: 'https://youtu.be/KNKYvxKnL1s',
+        imageURL: "/styles/Packers-Eagles2003.jpg",
+        title: 'Packers vs Eagles',
+        description: '2003 Divisional Playoff Matchup | Full Game'
+      },
+      {
+        youtubeURL: 'https://youtu.be/fFseBMw1SI4',
+        imageURL: "/styles/Eagles-Dolphins2003.jpg",
+        title: 'Eagles vs Dolphins',
+        description: 'Week 15 | Full Game'
+      },
+      {
+        youtubeURL: 'https://youtu.be/Dh87IxpYoD4',
+        imageURL: "/styles/Bengals-Chiefs2003.jpg",
+        title: 'Bengals vs Chiefs',
+        description: 'Bengals Week 11 Upset Win | Full Game'
       }
     ]
   },
