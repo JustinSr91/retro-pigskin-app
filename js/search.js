@@ -20,7 +20,6 @@ export default React.createClass({
   // //FIXME: Use this.state.years.map() to *iterate* over the years object
   // // Use <Link to link to /Search/:year - something like: <Link to={"/Search/" + year.year}/>
   // <Years year={ this.state.years.map } />
-  console.log("DATA:" + this.props.route.data)
     return (
       <section className="search__section">
         <h1 className="search__heading"> Search Games by Year </h1>

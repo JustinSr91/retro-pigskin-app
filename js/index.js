@@ -5,6 +5,7 @@ import App from './app'
 import Search from './search'
 import Home from './home'
 import SearchResults from './searchresults'
+import $ from 'jquery'
 
 var data = {
   '1998': {

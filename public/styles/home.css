@@ -10,6 +10,19 @@
   vertical-align: top;
 }
 
+.fa-play {
+  background-color: rgba(20, 20, 20, 0.8);
+  border-radius: 6px;
+  color: white;
+  content: "\f04b";
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 11%;
+  padding-left: 6px;
+  text-align: center;
+  width: 60px;
+}
+
 .game__year {
   color: #FB9B2A;
   list-style: none;
@@ -143,6 +156,10 @@ nav {
   margin-right: auto;
   margin-top: 5px;
   width: 60%;
+}
+
+.super-crazy-colors{
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .tagline {

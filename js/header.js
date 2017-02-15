@@ -11,6 +11,7 @@ export default React.createClass({
         </header>
         <Link to="/" className="navLink"> Home </Link>
         <Link to="/search" className="navLink"> Search </Link>
+        <Link to="/sign-in" className="navSignIn"> Sign In </Link>
       </nav>
     )
   }

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router'
 
+var FontAwesome = require('react-fontawesome');
+
 export default React.createClass({
   getInitialState() {
     return {
@@ -38,8 +40,16 @@ export default React.createClass({
           <div className="content__bundle">
             <a href="https://youtu.be/pcwsCS9nD3g"
                target="_blank">
-              <img src="/styles/Bucs-Rams2000.jpg"
-                   className="video__image"></img>
+             <div>
+               <FontAwesome
+                 className='fa fa-play'
+                 name='fa fa-play'
+                 size='2x'>
+               </FontAwesome>
+               <img src="/styles/Bucs-Rams2000.jpg"
+                    className="video__image">
+               </img>
+            </div>
             </a>
               <div className="details__container">
                 <h3 className="video__title"> Bucs vs Rams 2000 </h3>
@@ -48,8 +58,16 @@ export default React.createClass({
           </div>
           <div>
             <a href="https://youtu.be/UWPvuF1cjx0">
+            <div>
+              <FontAwesome
+                className='fa fa-play'
+                name='fa fa-play'
+                size='2x'>
+              </FontAwesome>
               <img src="/styles/Falcons-Packers2002.jpg"
-                   className="video__image"></img>
+                   className="video__image">
+              </img>
+           </div>
             </a>
               <div className="details__container">
                 <h3 className="video__title"> Falcons vs Packers 2002 </h3>
@@ -58,8 +76,16 @@ export default React.createClass({
           </div>
           <div>
             <a href="https://youtu.be/omphQiZ3hAk">
-              <img src="/styles/Vikings-Boys1998.jpg"
-                   className="video__image"></img>
+              <div>
+                <FontAwesome
+                  className='fa fa-play'
+                  name='fa fa-play'
+                  size='2x'>
+                </FontAwesome>
+                <img src="/styles/Vikings-Boys1998.jpg"
+                     className="video__image">
+                </img>
+              </div>
             </a>
               <div className="details__container">
                 <h3 className="video__title"> Vikings vs Cowboys 1998 </h3>
