@@ -15,7 +15,7 @@ export default React.createClass({
                       <img src={video.imageURL}
                            className="video__image"/>
                     </a>
-                    <h3 className="video__title">{video.title}
+                    <h3 className="video__title__search">{video.title}
                     </h3>
                       <p className="video__details__search">
                         {video.description}

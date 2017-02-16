@@ -27,7 +27,7 @@ export default React.createClass({
       <section className="title__section">
         <div className="main__container">
           <h1 className="tagline__title"> Featured Game </h1>
-          <iframe className="movie" width="560" height="315" src="https://www.youtube.com/embed/y_WryiWeGF0?rel=0" frameBorder="0" allowFullScreen></iframe>
+          <iframe className="movie" width="500" height="315" src="https://www.youtube.com/embed/y_WryiWeGF0?rel=0" frameBorder="0" allowFullScreen></iframe>
             <h2 className="mainVideo__title"> 2000 NFC Championship Game - Saints vs Rams </h2>
             <div className="mainVideo__details"> An action packed NFC Wild Card match-up pitting "The Greatest Show On Turf" vs."The Who Dat Nation" from the 2000 NFL playoffs.
             </div>
@@ -40,7 +40,7 @@ export default React.createClass({
           <div className="content__bundle">
             <a href="https://youtu.be/pcwsCS9nD3g"
                target="_blank">
-             <div>
+             <div className="image__container">
                <FontAwesome
                  className='fa fa-play'
                  name='fa fa-play'
@@ -56,9 +56,9 @@ export default React.createClass({
                   <p className="video__details"> In 1998, the Minnesota Vikings tore through the league behind a legendary air attack led by the trio of Randall Cunningham, Cris Carter, and Randy Moss. One of the first opportunities to showcase their greatness to the world was a Thanksgiving Day matchup with the Dallas Cowboys. The Vikings wasted no time stuffing the scoreboard, scoring 21 points in the first quarter as they went on to win the game 46-36. Randy Moss and Cris Carter combined for an incredible 298 yards. </p>
               </div>
           </div>
-          <div>
+          <div className="content__bundle">
             <a href="https://youtu.be/UWPvuF1cjx0">
-            <div>
+            <div className="image__container">
               <FontAwesome
                 className='fa fa-play'
                 name='fa fa-play'
@@ -74,9 +74,9 @@ export default React.createClass({
                   <p className="video__details"> In 1998, the Minnesota Vikings tore through the league behind a legendary air attack led by the trio of Randall Cunningham, Cris Carter, and Randy Moss. One of the first opportunities to showcase their greatness to the world was a Thanksgiving Day matchup with the Dallas Cowboys. The Vikings wasted no time stuffing the scoreboard, scoring 21 points in the first quarter as they went on to win the game 46-36. Randy Moss and Cris Carter combined for an incredible 298 yards. </p>
               </div>
           </div>
-          <div>
+          <div className="content__bundle">
             <a href="https://youtu.be/omphQiZ3hAk">
-              <div>
+              <div className="image__container">
                 <FontAwesome
                   className='fa fa-play'
                   name='fa fa-play'

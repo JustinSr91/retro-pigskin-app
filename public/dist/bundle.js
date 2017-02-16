@@ -26987,7 +26987,7 @@
 	          { className: 'tagline__title' },
 	          ' Featured Game '
 	        ),
-	        _react2.default.createElement('iframe', { className: 'movie', width: '560', height: '315', src: 'https://www.youtube.com/embed/y_WryiWeGF0?rel=0', frameBorder: '0', allowFullScreen: true }),
+	        _react2.default.createElement('iframe', { className: 'movie', width: '500', height: '315', src: 'https://www.youtube.com/embed/y_WryiWeGF0?rel=0', frameBorder: '0', allowFullScreen: true }),
 	        _react2.default.createElement(
 	          'h2',
 	          { className: 'mainVideo__title' },
@@ -27021,7 +27021,7 @@
 	                target: '_blank' },
 	              _react2.default.createElement(
 	                'div',
-	                null,
+	                { className: 'image__container' },
 	                _react2.default.createElement(FontAwesome, {
 	                  className: 'fa fa-play',
 	                  name: 'fa fa-play',
@@ -27047,13 +27047,13 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            null,
+	            { className: 'content__bundle' },
 	            _react2.default.createElement(
 	              'a',
 	              { href: 'https://youtu.be/UWPvuF1cjx0' },
 	              _react2.default.createElement(
 	                'div',
-	                null,
+	                { className: 'image__container' },
 	                _react2.default.createElement(FontAwesome, {
 	                  className: 'fa fa-play',
 	                  name: 'fa fa-play',
@@ -27079,13 +27079,13 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            null,
+	            { className: 'content__bundle' },
 	            _react2.default.createElement(
 	              'a',
 	              { href: 'https://youtu.be/omphQiZ3hAk' },
 	              _react2.default.createElement(
 	                'div',
-	                null,
+	                { className: 'image__container' },
 	                _react2.default.createElement(FontAwesome, {
 	                  className: 'fa fa-play',
 	                  name: 'fa fa-play',
@@ -27158,7 +27158,7 @@
 	          ),
 	          _react2.default.createElement(
 	            "h3",
-	            { className: "video__title" },
+	            { className: "video__title__search" },
 	            video.title
 	          ),
 	          _react2.default.createElement(
