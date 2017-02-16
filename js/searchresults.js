@@ -7,7 +7,7 @@ export default React.createClass({
     const yearData = data[year]
     return (
             <ul>
-              <h2> {yearData.summary}</h2>
+              <h2>{yearData.summary}</h2>
               { yearData.videos.map( (video, i) => {
                 return (
                   <li key={i}>

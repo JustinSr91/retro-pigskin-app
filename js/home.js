@@ -28,7 +28,9 @@ export default React.createClass({
         <div className="main__container">
           <h1 className="tagline__title"> Featured Game </h1>
           <iframe className="movie" width="500" height="315" src="https://www.youtube.com/embed/y_WryiWeGF0?rel=0" frameBorder="0" allowFullScreen></iframe>
-            <h2 className="mainVideo__title"> 2000 NFC Championship Game - Saints vs Rams </h2>
+            <a href="https://youtu.be/y_WryiWeGF0">
+              <h2 className="mainVideo__title"> 2006 NFC Divisional Matchup - Cowboys vs Eagles </h2>
+            </a>
             <div className="mainVideo__details"> An action packed NFC Wild Card match-up pitting "The Greatest Show On Turf" vs."The Who Dat Nation" from the 2000 NFL playoffs.
             </div>
             <div className="hideDetails" ref="hiddenText"> Kurt Warner and the St. Louis Rams battle Aaron Brooks, Ricky Williams and the New Orleans Saints from the Superdome in what would turn out to be the Saints first ever playoff win. </div>

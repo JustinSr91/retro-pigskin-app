@@ -5,11 +5,10 @@ import App from './app'
 import Search from './search'
 import Home from './home'
 import SearchResults from './searchresults'
-import $ from 'jquery'
 
 var data = {
   '1998': {
-    'summary': "Games from the 1998 NFL Season",
+    'summary': "NFL games from 1998",
     'videos': [
       {
         youtubeURL: 'https://youtu.be/omphQiZ3hAk',
@@ -44,7 +43,7 @@ var data = {
     ]
   },
   '1999': {
-    'summary': "Games from the 1999 NFL Season ",
+    'summary': "NFL games from 1999",
     'videos': [
       {
         youtubeURL: 'https://youtu.be/bflL0XATHAw',
@@ -67,7 +66,7 @@ var data = {
     ]
   },
   '2000': {
-    'summary': "Games from the 2000 NFL Season ",
+    'summary': "NFL games from 2000",
     'videos': [
       {
         youtubeURL: 'https://youtu.be/hOfjgr-lC4c',
@@ -96,7 +95,7 @@ var data = {
     ]
   },
   '2001': {
-    'summary': "Games from the 2001 NFL Season ",
+    'summary': "NFL games from 2001",
     'videos': [
       {
         youtubeURL: 'https://youtu.be/UkSi2JK98pM',
@@ -125,7 +124,7 @@ var data = {
     ]
   },
   '2002': {
-    'summary': "Games from the 2002 NFL Season ",
+    'summary': "NFL games from 2002",
     'videos': [
       {
         youtubeURL: 'https://youtu.be/YiG9wYOE1B4',
@@ -172,7 +171,7 @@ var data = {
     ]
   },
   '2003': {
-    'summary': "Games from the 2003 NFL Season ",
+    'summary': "NFL games from 2003",
     'videos': [
       {
         youtubeURL: 'https://youtu.be/OjaQG0WoXH0',
@@ -219,7 +218,7 @@ var data = {
     ]
   },
   '2004': {
-    'summary': "Games from the 2004  NFL Season",
+    'summary': "NFL games from 2004",
     'videos': [
       {
         youtubeURL: 'https://youtu.be/Xf68qnFDg54',
