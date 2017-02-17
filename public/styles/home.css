@@ -2,9 +2,13 @@ a {
   text-decoration: none;
 }
 
+.content__bundle {
+  padding-right: 25px;
+}
+
 .details__container {
   display: block;
-  margin-left: 20px;
+  margin-left: 50px;
   vertical-align: top;
 }
 
@@ -13,8 +17,8 @@ a {
   border-radius: 6px;
   color: white;
   content: "\f04b";
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-left: 43px;
+  margin-top: 43px;
   padding-left: 6px;
   position: absolute;
   text-align: center;
@@ -77,9 +81,8 @@ h2{
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
-  width: 400px;
+  width: 600px;
 }
-
 
 .mainVideo__details {
   display: table;
@@ -129,7 +132,7 @@ h2{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 398px;
+  width: 550px;
 }
 
 nav {
@@ -217,8 +220,8 @@ ul {
   margin-right: auto;
   margin-top: 0;
   padding-right: 20px;
-  text-align: justify;
-  width: 250px;
+  text-align: center;
+  width: 180px;
 }
 
 .video__details__search {
@@ -234,7 +237,7 @@ ul {
   margin-left: auto;
   margin-top: 30px;
   margin-right: auto;
-  width: 120px;
+  width: 150px;
 }
 
 .video__title {
@@ -242,7 +245,7 @@ ul {
   display: block;
   font-size: 14px;
   font-weight: 100;
-  margin: 10px auto 10px auto;
+  margin: 10px auto 2px auto;
   padding-right: 20px;
   text-align: center;
   vertical-align: top;

@@ -26951,7 +26951,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var FontAwesome = __webpack_require__(240);
+	var FontAwesome = __webpack_require__(239);
 	
 	exports.default = _react2.default.createClass({
 	  displayName: 'home',
@@ -26961,7 +26961,7 @@
 	      expanded: false
 	    };
 	  },
-	  toggleButtonText: function toggleButtonText(e) {
+	  toggleText: function toggleText(e) {
 	    this.setState({
 	      expanded: !this.state.expanded
 	    });
@@ -26993,20 +26993,16 @@
 	            ' 2006 NFC Divisional Matchup - Cowboys vs Eagles '
 	          )
 	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'mainVideo__details' },
-	          ' An action packed NFC Wild Card match-up pitting "The Greatest Show On Turf" vs."The Who Dat Nation" from the 2000 NFL playoffs.'
-	        ),
+	        _react2.default.createElement('div', { className: 'mainVideo__details' }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'hideDetails', ref: 'hiddenText' },
-	          ' Kurt Warner and the St. Louis Rams battle Aaron Brooks, Ricky Williams and the New Orleans Saints from the Superdome in what would turn out to be the Saints first ever playoff win. '
+	          ' Cowboys 2-2 Eagles 4-1. October 8, 2006. '
 	        ),
 	        _react2.default.createElement(
 	          'button',
 	          { type: 'button', className: 'transition__button',
-	            onClick: this.toggleButtonText },
+	            onClick: this.toggleText },
 	          this.state.expanded ? "SHOW LESS" : "SHOW MORE"
 	        ),
 	        _react2.default.createElement(
@@ -27041,7 +27037,7 @@
 	              _react2.default.createElement(
 	                'p',
 	                { className: 'video__details' },
-	                ' In 1998, the Minnesota Vikings tore through the league behind a legendary air attack led by the trio of Randall Cunningham, Cris Carter, and Randy Moss. One of the first opportunities to showcase their greatness to the world was a Thanksgiving Day matchup with the Dallas Cowboys. The Vikings wasted no time stuffing the scoreboard, scoring 21 points in the first quarter as they went on to win the game 46-36. Randy Moss and Cris Carter combined for an incredible 298 yards. '
+	                ' Week 16 Matchup '
 	              )
 	            )
 	          ),
@@ -27073,7 +27069,7 @@
 	              _react2.default.createElement(
 	                'p',
 	                { className: 'video__details' },
-	                ' In 1998, the Minnesota Vikings tore through the league behind a legendary air attack led by the trio of Randall Cunningham, Cris Carter, and Randy Moss. One of the first opportunities to showcase their greatness to the world was a Thanksgiving Day matchup with the Dallas Cowboys. The Vikings wasted no time stuffing the scoreboard, scoring 21 points in the first quarter as they went on to win the game 46-36. Randy Moss and Cris Carter combined for an incredible 298 yards. '
+	                ' Wild Card playoff matchup '
 	              )
 	            )
 	          ),
@@ -27082,7 +27078,7 @@
 	            { className: 'content__bundle' },
 	            _react2.default.createElement(
 	              'a',
-	              { href: 'https://youtu.be/omphQiZ3hAk' },
+	              { href: 'https://youtu.be/eoE0VLUz00o' },
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'image__container' },
@@ -27090,7 +27086,7 @@
 	                  className: 'fa fa-play',
 	                  name: 'fa fa-play',
 	                  size: '2x' }),
-	                _react2.default.createElement('img', { src: '/styles/Vikings-Boys1998.jpg',
+	                _react2.default.createElement('img', { src: '/styles/Titans-Bills1999.jpg',
 	                  className: 'video__image' })
 	              )
 	            ),
@@ -27100,12 +27096,12 @@
 	              _react2.default.createElement(
 	                'h3',
 	                { className: 'video__title' },
-	                ' Vikings vs Cowboys 1998 '
+	                ' Titans vs Bills 1999 '
 	              ),
 	              _react2.default.createElement(
 	                'p',
 	                { className: 'video__details' },
-	                ' In 1998, the Minnesota Vikings tore through the league behind a legendary air attack led by the trio of Randall Cunningham, Cris Carter, and Randy Moss. One of the first opportunities to showcase their greatness to the world was a Thanksgiving Day matchup with the Dallas Cowboys. The Vikings wasted no time stuffing the scoreboard, scoring 21 points in the first quarter as they went on to win the game 46-36. Randy Moss and Cris Carter combined for an incredible 298 yards. '
+	                ' AFC Wild Card Game '
 	              )
 	            )
 	          )
@@ -27172,8 +27168,7 @@
 	});
 
 /***/ },
-/* 239 */,
-/* 240 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27188,7 +27183,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _screenReaderStyles = __webpack_require__(241);
+	var _screenReaderStyles = __webpack_require__(240);
 	
 	var _screenReaderStyles2 = _interopRequireDefault(_screenReaderStyles);
 	
@@ -27294,7 +27289,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 241 */
+/* 240 */
 /***/ function(module, exports) {
 
 	'use strict';
