@@ -29,6 +29,16 @@ export default React.createClass({
   render(){
     return(
       <section className="container">
+          <div className="flag__container">
+           <img src="flags/49ersflag.jpg" className="flag"></img>
+           <img src="flags/bengalsflag.jpg" className="flag"></img>
+           <img src="flags/broncosflag.jpg" className="flag"></img>
+           <img src="flags/cowboysflag.jpg" className="flag"></img>
+           <img src="flags/giantsflag.jpg" className="flag"></img>
+           <img src="flags/packersflag.jpg" className="flag"></img>
+           <img src="flags/patriotsflag.jpg" className="flag"></img>
+           <img src="flags/lionsflag.jpg" className="flag"></img>
+          </div>
           <div className="div__video">
             <iframe width="560"
                     height="315"
@@ -39,16 +49,6 @@ export default React.createClass({
           </div>
           <div className="div__aside">
             <aside className="element__aside">
-                 <div className="flag__container">
-                  <img src="flags/49ersflag.jpg" className="flag"></img>
-                  <img src="flags/bengalsflag.jpg" className="flag"></img>
-                  <img src="flags/broncosflag.jpg" className="flag"></img>
-                  <img src="flags/cowboysflag.jpg" className="flag"></img>
-                  <img src="flags/giantsflag.jpg" className="flag"></img>
-                  <img src="flags/packersflag.jpg" className="flag"></img>
-                  <img src="flags/patriotsflag.jpg" className="flag"></img>
-                  <img src="flags/lionsflag.jpg" className="flag"></img>
-                 </div>
                  <h2 className="aside__title">
                      More Games
                  </h2>
@@ -132,8 +132,6 @@ export default React.createClass({
               <div className="view__div">
               </div>
           </div>
-         <section className="comments__section">
-         </section>
        </section>
     )
     }

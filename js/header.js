@@ -16,11 +16,14 @@ export default React.createClass({
     return (
       <nav className="nav__bar">
         <header className="header">
-          <h1>Retro Pigskin</h1>
+          <div className="app-title-div">
+            <img src="/styles/helmet-icon.jpg" className="icon__helmet"></img>
+            <h1 className="app-title">Retro Pigskin</h1>
+          </div>
         </header>
           <Link to="/" className="nav__Link"> Home </Link>
           <Link to="/search" className="nav__Link"> Search </Link>
-            <div>
+            <div className="user__group">
               <img ref="userImage" className="nav__currentUserImage" src={this.props.user.picture}>
               </img>
               <button ref="userLogInButton"

@@ -25,13 +25,6 @@
   width: 60px;
 }
 
-.game__year {
-  color: #FB9B2A;
-  list-style: none;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
 .group__link {
   text-decoration: none;
 }
@@ -174,16 +167,6 @@ nav {
 
 }
 
-.search__heading {
-  text-align: center;
-}
-
-.search__section {
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 50px;
-  width: 400px;
-}
 
 .secondary__container {
   background: white;
@@ -239,22 +222,6 @@ ul {
   width: 180px;
 }
 
-.video__details__search {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  text-align: center;
-  width: 200px;
-}
-
-.video__image {
-  display: block;
-  margin-left: auto;
-  margin-top: 30px;
-  margin-right: auto;
-  width: 150px;
-}
-
 .video__title {
   color: #FB9B2A;
   display: block;
@@ -267,20 +234,6 @@ ul {
   width: 150px;
 }
 
-.video__title__search {
-  color: #FB9B2A;
-  display: block;
-  font-size: 14px;
-  font-weight: 100;
-  margin: 10px auto 10px auto;
-  text-align: center;
-  vertical-align: top;
-  width: 150px;
-}
-
-.yearContainer {
-  text-align: center;
-}*/
 */
 /* NEW CONTENT  */
 
@@ -299,8 +252,20 @@ h1 {
 }
 
 header {
-  width: 130px;
-  display: inline;
+  width: 175px;
+  display: inline-block;
+  height: 34px;
+}
+
+.app-title {
+  display: inherit;
+  margin-left: 0;
+  margin: 11px 0 0 5px;
+}
+
+.app-title-div {
+  display: inline-flex;
+  height: 34px;
 }
 
 /* Up Next videos */
@@ -373,7 +338,8 @@ header {
 .details__div {
   display: inline-block;
   margin: 0;
-  margin-left: 10px;
+  margin-left: 130px;
+  text-align: center;
   vertical-align: top;
   width: 150px;
 }
@@ -400,8 +366,9 @@ header {
   border-width: 3px;
   display: inline-block;
   float: right;
-  height: 900px;
-  width: 350px;
+  height: 700px;
+  padding-top: 10px;
+  width: 400px;
 }
 
 .element__dislikes {
@@ -432,7 +399,7 @@ header {
   border-radius: 6px;
   color: white;
   content: "\f04b";
-  margin-left: 153px;
+  margin-left: 176px;
   margin-top: 48px;
   padding-left: 6px;
   position: absolute;
@@ -441,19 +408,33 @@ header {
 }
 
 .flag {
-  margin-right: 11px;
-  width: 75px;
+  margin-left: 15px;
+  margin-right: 5px;
+  padding-top: 5px;
+  width: 130px;
 }
 
 .flag__container {
-  background-color: white;
+  background-color: darkred;
+  border-bottom-color: darkred;
+  border-bottom-style: ridge;
+  border-bottom-width: 2px;
   display: inline-block;
+  margin-bottom: 5px;
+  padding-left: 4px;
   width: 100%;
 }
 
 .full__body {
   background-color: rgb(241, 241, 241);
   margin: 0;
+}
+
+.game__year {
+  color: #FB9B2A;
+  list-style: none;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .h3__details {
@@ -463,6 +444,13 @@ header {
   margin-bottom: 0;
   margin-top: 0;
   width: 182px;
+}
+
+.icon__helmet {
+  display: inline-block;
+  height: 34px;
+  vertical-align: baseline;
+  width: 50px;
 }
 
 .img__aside {
@@ -501,29 +489,36 @@ header {
   width: 678px;
 }
 
+.nav__currentUserImage {
+  width: 58px;
+  height: 35px;
+  margin-top: 3px;
+}
+
 .nav__bar {
   background-color: white;
   border-color: darkred;
   border-style: ridge;
   border-width: 3px;
-  height: 40px;
-  padding: 9px 20px;
+  padding: 0;
 }
 
 .nav__Link {
-  display: inline;
-  margin-left: 15px;
+  color: darkred;
+  display: inline-flex;
+  margin-left: 10px;
   text-decoration: none;
+  vertical-align: super;
 }
 
 .nav__signIn {
-  background-color: rgb(231, 76, 60);
+  background-color: darkred;
   border-radius: 0.4rem;
   color: rgb(245, 245, 245);
   display: inline-block;
   padding: 0.3rem 1rem;
   position: absolute;
-  top: 0.9rem;
+  top: 1rem;
   right: 1rem;
   transition: color 0.6s, background-color 0.6s;
 }
@@ -536,13 +531,13 @@ header {
 }
 
 .nav__signOut {
-  background-color: rgb(231, 76, 60);
+  background-color: darkred;
   border-radius: 0.4rem;
   color: rgb(245, 245, 245);
   display: inline-block;
   padding: 0.5rem 1rem;
   position: absolute;
-  top: 1rem;
+  top: 0.8rem;
   right: 1rem;
   transition: color 0.6s, background-color 0.6s;
 }
@@ -560,12 +555,34 @@ header {
   width: 678px;
 }
 
+.results__heading {
+  width: 500px;
+  display: block;
+  font-size: 1.17em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .search__form {
   border-color: black;
   display: inline-block;
   margin-left: 85px;
   vertical-align: top;
 }
+
+.search__heading {
+  display: block;
+  text-align: center;
+  width: 500px;
+}
+
+.search__section {
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+
 /* Nav search bar */
 .search__submit,
 .search__text {
@@ -583,6 +600,11 @@ header {
 
 .search__text {
   width: 460px;
+}
+
+.search__year {
+  margin-bottom: 5px;
+  text-decoration: blink;
 }
 
 .show__more__div {
@@ -623,9 +645,11 @@ header {
   width: 150px;
 }
 
-.user__group__top {
+.user__group {
+  width: 135px;
   display: inline-block;
   float: right;
+  height: 38px;
 }
 
 .username__freestyler {
@@ -643,7 +667,7 @@ header {
   border-width: 4px;
   display: inline-block;
   height: 385px;
-  width: 678px;
+  width: 720px;
 }
 
 .video__cat__photo {
@@ -682,7 +706,7 @@ header {
   margin: 0;
   padding-left: 0;
   padding-right: 0;
-  width: 678px;
+  width: 720px;
 }
 
 .video__subscribe__button {
@@ -697,6 +721,47 @@ header {
   width: 600px;
 }
 
+.video__details__search {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  text-align: center;
+  width: 200px;
+}
+
+.video__found {
+  width: 500px;
+}
+
+.video__image {
+  display: block;
+  margin-left: auto;
+  margin-top: 30px;
+  margin-right: auto;
+  width: 180px;
+}
+
+.video__title__search {
+  color: darkred;
+  display: block;
+  font-size: 14px;
+  font-weight: 100;
+  margin: 10px auto 10px auto;
+  text-align: center;
+  vertical-align: top;
+  width: 150px;
+}
+
+.video__ul {
+  border-style: ridge;
+  border-color: darkred;
+  list-style: none;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
 /* Video Views text */
 .video__views__count {
   color: rgb(85, 85, 85);
@@ -707,4 +772,15 @@ header {
   margin-bottom: 0;
   margin-right: 15px;
   margin-top: 0;
+}
+
+.yearContainer {
+  border-style: ridge;
+  border-color: darkred;
+  border-width: 3px;
+  width: 500px;
+  display: inline-block;
+  padding-top: 40px;
+  text-align: center;
+  height: 250px;
 }

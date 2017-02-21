@@ -26,7 +26,7 @@ export default React.createClass({
         <div className="yearContainer">
           { Object.keys(this.props.route.data).map( (year, i) => {
             return (
-              <div key={i}>
+              <div className="search__year" key={i}>
                 <Link to={"/Search/" + year}>{year}</Link>
               </div>
             )

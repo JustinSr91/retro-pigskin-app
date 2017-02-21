@@ -58,11 +58,11 @@
 	
 	var _app2 = _interopRequireDefault(_app);
 	
-	var _search = __webpack_require__(243);
+	var _search = __webpack_require__(245);
 	
 	var _search2 = _interopRequireDefault(_search);
 	
-	var _home = __webpack_require__(244);
+	var _home = __webpack_require__(246);
 	
 	var _home2 = _interopRequireDefault(_home);
 	
@@ -26769,15 +26769,15 @@
 	
 	var _header2 = _interopRequireDefault(_header);
 	
-	var _footer = __webpack_require__(235);
+	var _footer = __webpack_require__(244);
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
-	var _firebase = __webpack_require__(236);
+	var _firebase = __webpack_require__(235);
 	
 	var _firebase2 = _interopRequireDefault(_firebase);
 	
-	var _fbAuth = __webpack_require__(242);
+	var _fbAuth = __webpack_require__(241);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -26818,32 +26818,30 @@
 	        (0, _fbAuth.fbUpdateUser)(currentUser);
 	
 	        (0, _fbAuth.fbWhenUserUpdated)(authUser.uid, function (snapshot) {
-	          // This sets up a callback once firebase reports that /users/{user.uid} has a value
 	          var snapshotReturn = snapshot.val();
 	          _this.setState({
 	            user: {
 	              authed: true,
 	              name: snapshotReturn.name,
 	              email: snapshotReturn.email,
-	              picture: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRScfj8VzfB-pB3jQxbn0NXS2qQy-D07gsplccAE4F_XK17i-9rdA",
+	              picture: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRScfj8VzfB-pB3jQxbn0NXS2qQy-D07gsplccAE4F_XK17i-9rdA',
 	              lastLogin: snapshotReturn.lastLogin
 	            }
 	          });
 	        });
 	      } else {
-	        // signed out or something went wrong
 	        console.log("LOGGED OUT");
 	      }
 	    });
 	  },
 	  signUserIn: function signUserIn() {
+	    console.log("signUserIn");
 	    (0, _fbAuth.fbSignInWithRedirect)();
 	  },
 	  signUserOut: function signUserOut() {
 	    var _this2 = this;
 	
 	    (0, _fbAuth.fbSetupSignoutCallback)(function () {
-	      //FIXME: Don't repeat myself from getInitialState()
 	      _this2.setState({
 	        user: {
 	          authed: false,
@@ -26884,15 +26882,15 @@
 	
 	var _reactRouter = __webpack_require__(178);
 	
-	var _firebase = __webpack_require__(236);
+	var _firebase = __webpack_require__(235);
 	
 	var _firebase2 = _interopRequireDefault(_firebase);
 	
-	var _fbAuth = __webpack_require__(242);
+	var _fbAuth = __webpack_require__(241);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var FontAwesome = __webpack_require__(245);
+	var FontAwesome = __webpack_require__(242);
 	
 	exports.default = _react2.default.createClass({
 	  displayName: 'header',
@@ -26910,9 +26908,14 @@
 	        'header',
 	        { className: 'header' },
 	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Retro Pigskin'
+	          'div',
+	          { className: 'app-title-div' },
+	          _react2.default.createElement('img', { src: '/styles/helmet-icon.jpg', className: 'icon__helmet' }),
+	          _react2.default.createElement(
+	            'h1',
+	            { className: 'app-title' },
+	            'Retro Pigskin'
+	          )
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -26927,7 +26930,7 @@
 	      ),
 	      _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'user__group' },
 	        _react2.default.createElement('img', { ref: 'userImage', className: 'nav__currentUserImage', src: this.props.user.picture }),
 	        _react2.default.createElement(
 	          'button',
@@ -26954,35 +26957,6 @@
 /* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(178);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = _react2.default.createClass({
-	  displayName: "footer",
-	  render: function render() {
-	    return _react2.default.createElement(
-	      "section",
-	      null,
-	      _react2.default.createElement("footer", null)
-	    );
-	  }
-	});
-
-/***/ },
-/* 236 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/**
 	 *  Firebase libraries for browser - npm package.
 	 *
@@ -26990,16 +26964,16 @@
 	 *
 	 *   firebase = require('firebase');
 	 */
-	var firebase = __webpack_require__(237);
+	var firebase = __webpack_require__(236);
+	__webpack_require__(237);
 	__webpack_require__(238);
 	__webpack_require__(239);
 	__webpack_require__(240);
-	__webpack_require__(241);
 	module.exports = firebase;
 
 
 /***/ },
-/* 237 */
+/* 236 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {var firebase = (function(){
@@ -27038,10 +27012,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 238 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(237);
+	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(236);
 	(function(){
 	/*! @license Firebase v3.6.8
 	    Build: 3.6.8-rc.1
@@ -27286,10 +27260,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 239 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(237);
+	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(236);
 	(function(){
 	/*! @license Firebase v3.6.8
 	    Build: 3.6.8-rc.1
@@ -27557,10 +27531,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 240 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(237);
+	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(236);
 	(function(){
 	/*! @license Firebase v3.6.8
 	    Build: 3.6.8-rc.1
@@ -27618,10 +27592,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 241 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(237);
+	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(236);
 	(function(){
 	/*! @license Firebase v3.6.8
 	    Build: 3.6.8-rc.1
@@ -27664,7 +27638,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 242 */
+/* 241 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -27712,7 +27686,178 @@
 	}
 
 /***/ },
+/* 242 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _screenReaderStyles = __webpack_require__(243);
+	
+	var _screenReaderStyles2 = _interopRequireDefault(_screenReaderStyles);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	/**
+	 * A React component for the font-awesome icon library.
+	 *
+	 *
+	 * @param {String} [ariaLabel] An extra accessibility label to put on the icon
+	 * @param {Boolean} [border=false] Whether or not to show a border radius
+	 * @param {String} [className] An extra set of CSS classes to add to the component
+	 * @param {Object} [cssModule] Option to pass FontAwesome CSS as a module
+	 * @param {Boolean} [fixedWidth=false] Make buttons fixed width
+	 * @param {String} [flip=false] Flip the icon's orientation.
+	 * @param {Boolean} [inverse=false]Inverse the icon's color
+	 * @param {String} name Name of the icon to use
+	 * @param {Boolean} [pulse=false] Rotate icon with 8 steps (rather than smoothly)
+	 * @param {Number} [rotate] The degress to rotate the icon by
+	 * @param {String} [size] The icon scaling size
+	 * @param {Boolean} [spin=false] Spin the icon
+	 * @param {String} [stack] Stack an icon on top of another
+	 * @param {String} [tag=span] The HTML tag to use as a string (eg 'i' or 'em')
+	 * @module FontAwesome
+	 * @type {ReactClass}
+	 */
+	exports.default = _react2.default.createClass({
+	
+	  displayName: 'FontAwesome',
+	
+	  propTypes: {
+	    ariaLabel: _react2.default.PropTypes.string,
+	    border: _react2.default.PropTypes.bool,
+	    className: _react2.default.PropTypes.string,
+	    cssModule: _react2.default.PropTypes.object,
+	    fixedWidth: _react2.default.PropTypes.bool,
+	    flip: _react2.default.PropTypes.oneOf(['horizontal', 'vertical']),
+	    inverse: _react2.default.PropTypes.bool,
+	    name: _react2.default.PropTypes.string.isRequired,
+	    pulse: _react2.default.PropTypes.bool,
+	    rotate: _react2.default.PropTypes.oneOf([90, 180, 270]),
+	    size: _react2.default.PropTypes.oneOf(['lg', '2x', '3x', '4x', '5x']),
+	    spin: _react2.default.PropTypes.bool,
+	    stack: _react2.default.PropTypes.oneOf(['1x', '2x']),
+	    tag: _react2.default.PropTypes.string
+	  },
+	
+	  render: function render() {
+	    var _props = this.props;
+	    var border = _props.border;
+	    var cssModule = _props.cssModule;
+	    var className = _props.className;
+	    var fixedWidth = _props.fixedWidth;
+	    var flip = _props.flip;
+	    var inverse = _props.inverse;
+	    var name = _props.name;
+	    var pulse = _props.pulse;
+	    var rotate = _props.rotate;
+	    var size = _props.size;
+	    var spin = _props.spin;
+	    var stack = _props.stack;
+	    var _props$tag = _props.tag;
+	    var tag = _props$tag === undefined ? 'span' : _props$tag;
+	    var ariaLabel = _props.ariaLabel;
+	
+	    var props = _objectWithoutProperties(_props, ['border', 'cssModule', 'className', 'fixedWidth', 'flip', 'inverse', 'name', 'pulse', 'rotate', 'size', 'spin', 'stack', 'tag', 'ariaLabel']);
+	
+	    var classNames = [];
+	
+	    if (cssModule) {
+	      classNames.push(cssModule['fa']);
+	      classNames.push(cssModule['fa-' + name]);
+	      size && classNames.push(cssModule['fa-' + size]);
+	      spin && classNames.push(cssModule['fa-spin']);
+	      pulse && classNames.push(cssModule['fa-pulse']);
+	      border && classNames.push(cssModule['fa-border']);
+	      fixedWidth && classNames.push(cssModule['fa-fw']);
+	      inverse && classNames.push(cssModule['fa-inverse']);
+	      flip && classNames.push(cssModule['fa-flip-' + flip]);
+	      rotate && classNames.push(cssModule['fa-rotate-' + rotate]);
+	      stack && classNames.push(cssModule['fa-stack-' + stack]);
+	    } else {
+	      classNames.push('fa');
+	      classNames.push('fa-' + name);
+	      size && classNames.push('fa-' + size);
+	      spin && classNames.push('fa-spin');
+	      pulse && classNames.push('fa-pulse');
+	      border && classNames.push('fa-border');
+	      fixedWidth && classNames.push('fa-fw');
+	      inverse && classNames.push('fa-inverse');
+	      flip && classNames.push('fa-flip-' + flip);
+	      rotate && classNames.push('fa-rotate-' + rotate);
+	      stack && classNames.push('fa-stack-' + stack);
+	    }
+	
+	    // Add any custom class names at the end.
+	    className && classNames.push(className);
+	    return _react2.default.createElement(tag, _extends({}, props, { 'aria-hidden': true, className: classNames.join(' ') }), ariaLabel ? _react2.default.createElement('span', { style: _screenReaderStyles2.default }, ariaLabel) : null);
+	  }
+	});
+	module.exports = exports['default'];
+
+/***/ },
 /* 243 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  position: 'absolute',
+	  width: '1px',
+	  height: '1px',
+	  padding: '0px',
+	  margin: '-1px',
+	  overflow: 'hidden',
+	  clip: 'rect(0px, 0px, 0px, 0px)',
+	  border: '0px'
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 244 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(178);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = _react2.default.createClass({
+	  displayName: "footer",
+	  render: function render() {
+	    return _react2.default.createElement(
+	      "section",
+	      null,
+	      _react2.default.createElement("footer", null)
+	    );
+	  }
+	});
+
+/***/ },
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27762,7 +27907,7 @@
 	        Object.keys(this.props.route.data).map(function (year, i) {
 	          return _react2.default.createElement(
 	            'div',
-	            { key: i },
+	            { className: 'search__year', key: i },
 	            _react2.default.createElement(
 	              _reactRouter.Link,
 	              { to: "/Search/" + year },
@@ -27776,7 +27921,7 @@
 	});
 
 /***/ },
-/* 244 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27791,7 +27936,7 @@
 	
 	var _reactRouter = __webpack_require__(178);
 	
-	var _firebase = __webpack_require__(236);
+	var _firebase = __webpack_require__(235);
 	
 	var _firebase2 = _interopRequireDefault(_firebase);
 	
@@ -27801,7 +27946,7 @@
 	// import {
 	//   fbSignUserIn
 	// } from './fbAuth'
-	var FontAwesome = __webpack_require__(245);
+	var FontAwesome = __webpack_require__(242);
 	
 	exports.default = _react2.default.createClass({
 	  displayName: 'home',
@@ -27827,6 +27972,18 @@
 	      { className: 'container' },
 	      _react2.default.createElement(
 	        'div',
+	        { className: 'flag__container' },
+	        _react2.default.createElement('img', { src: 'flags/49ersflag.jpg', className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/bengalsflag.jpg', className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/broncosflag.jpg', className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/cowboysflag.jpg', className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/giantsflag.jpg', className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/packersflag.jpg', className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/patriotsflag.jpg', className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/lionsflag.jpg', className: 'flag' })
+	      ),
+	      _react2.default.createElement(
+	        'div',
 	        { className: 'div__video' },
 	        _react2.default.createElement('iframe', { width: '560',
 	          height: '315',
@@ -27840,18 +27997,6 @@
 	        _react2.default.createElement(
 	          'aside',
 	          { className: 'element__aside' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'flag__container' },
-	            _react2.default.createElement('img', { src: 'flags/49ersflag.jpg', className: 'flag' }),
-	            _react2.default.createElement('img', { src: 'flags/bengalsflag.jpg', className: 'flag' }),
-	            _react2.default.createElement('img', { src: 'flags/broncosflag.jpg', className: 'flag' }),
-	            _react2.default.createElement('img', { src: 'flags/cowboysflag.jpg', className: 'flag' }),
-	            _react2.default.createElement('img', { src: 'flags/giantsflag.jpg', className: 'flag' }),
-	            _react2.default.createElement('img', { src: 'flags/packersflag.jpg', className: 'flag' }),
-	            _react2.default.createElement('img', { src: 'flags/patriotsflag.jpg', className: 'flag' }),
-	            _react2.default.createElement('img', { src: 'flags/lionsflag.jpg', className: 'flag' })
-	          ),
 	          _react2.default.createElement(
 	            'h2',
 	            { className: 'aside__title' },
@@ -27973,153 +28118,10 @@
 	          this.state.expanded ? "SHOW LESS" : "SHOW MORE"
 	        ),
 	        _react2.default.createElement('div', { className: 'view__div' })
-	      ),
-	      _react2.default.createElement('section', { className: 'comments__section' })
+	      )
 	    );
 	  }
 	});
-
-/***/ },
-/* 245 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _screenReaderStyles = __webpack_require__(246);
-	
-	var _screenReaderStyles2 = _interopRequireDefault(_screenReaderStyles);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-	
-	/**
-	 * A React component for the font-awesome icon library.
-	 *
-	 *
-	 * @param {String} [ariaLabel] An extra accessibility label to put on the icon
-	 * @param {Boolean} [border=false] Whether or not to show a border radius
-	 * @param {String} [className] An extra set of CSS classes to add to the component
-	 * @param {Object} [cssModule] Option to pass FontAwesome CSS as a module
-	 * @param {Boolean} [fixedWidth=false] Make buttons fixed width
-	 * @param {String} [flip=false] Flip the icon's orientation.
-	 * @param {Boolean} [inverse=false]Inverse the icon's color
-	 * @param {String} name Name of the icon to use
-	 * @param {Boolean} [pulse=false] Rotate icon with 8 steps (rather than smoothly)
-	 * @param {Number} [rotate] The degress to rotate the icon by
-	 * @param {String} [size] The icon scaling size
-	 * @param {Boolean} [spin=false] Spin the icon
-	 * @param {String} [stack] Stack an icon on top of another
-	 * @param {String} [tag=span] The HTML tag to use as a string (eg 'i' or 'em')
-	 * @module FontAwesome
-	 * @type {ReactClass}
-	 */
-	exports.default = _react2.default.createClass({
-	
-	  displayName: 'FontAwesome',
-	
-	  propTypes: {
-	    ariaLabel: _react2.default.PropTypes.string,
-	    border: _react2.default.PropTypes.bool,
-	    className: _react2.default.PropTypes.string,
-	    cssModule: _react2.default.PropTypes.object,
-	    fixedWidth: _react2.default.PropTypes.bool,
-	    flip: _react2.default.PropTypes.oneOf(['horizontal', 'vertical']),
-	    inverse: _react2.default.PropTypes.bool,
-	    name: _react2.default.PropTypes.string.isRequired,
-	    pulse: _react2.default.PropTypes.bool,
-	    rotate: _react2.default.PropTypes.oneOf([90, 180, 270]),
-	    size: _react2.default.PropTypes.oneOf(['lg', '2x', '3x', '4x', '5x']),
-	    spin: _react2.default.PropTypes.bool,
-	    stack: _react2.default.PropTypes.oneOf(['1x', '2x']),
-	    tag: _react2.default.PropTypes.string
-	  },
-	
-	  render: function render() {
-	    var _props = this.props;
-	    var border = _props.border;
-	    var cssModule = _props.cssModule;
-	    var className = _props.className;
-	    var fixedWidth = _props.fixedWidth;
-	    var flip = _props.flip;
-	    var inverse = _props.inverse;
-	    var name = _props.name;
-	    var pulse = _props.pulse;
-	    var rotate = _props.rotate;
-	    var size = _props.size;
-	    var spin = _props.spin;
-	    var stack = _props.stack;
-	    var _props$tag = _props.tag;
-	    var tag = _props$tag === undefined ? 'span' : _props$tag;
-	    var ariaLabel = _props.ariaLabel;
-	
-	    var props = _objectWithoutProperties(_props, ['border', 'cssModule', 'className', 'fixedWidth', 'flip', 'inverse', 'name', 'pulse', 'rotate', 'size', 'spin', 'stack', 'tag', 'ariaLabel']);
-	
-	    var classNames = [];
-	
-	    if (cssModule) {
-	      classNames.push(cssModule['fa']);
-	      classNames.push(cssModule['fa-' + name]);
-	      size && classNames.push(cssModule['fa-' + size]);
-	      spin && classNames.push(cssModule['fa-spin']);
-	      pulse && classNames.push(cssModule['fa-pulse']);
-	      border && classNames.push(cssModule['fa-border']);
-	      fixedWidth && classNames.push(cssModule['fa-fw']);
-	      inverse && classNames.push(cssModule['fa-inverse']);
-	      flip && classNames.push(cssModule['fa-flip-' + flip]);
-	      rotate && classNames.push(cssModule['fa-rotate-' + rotate]);
-	      stack && classNames.push(cssModule['fa-stack-' + stack]);
-	    } else {
-	      classNames.push('fa');
-	      classNames.push('fa-' + name);
-	      size && classNames.push('fa-' + size);
-	      spin && classNames.push('fa-spin');
-	      pulse && classNames.push('fa-pulse');
-	      border && classNames.push('fa-border');
-	      fixedWidth && classNames.push('fa-fw');
-	      inverse && classNames.push('fa-inverse');
-	      flip && classNames.push('fa-flip-' + flip);
-	      rotate && classNames.push('fa-rotate-' + rotate);
-	      stack && classNames.push('fa-stack-' + stack);
-	    }
-	
-	    // Add any custom class names at the end.
-	    className && classNames.push(className);
-	    return _react2.default.createElement(tag, _extends({}, props, { 'aria-hidden': true, className: classNames.join(' ') }), ariaLabel ? _react2.default.createElement('span', { style: _screenReaderStyles2.default }, ariaLabel) : null);
-	  }
-	});
-	module.exports = exports['default'];
-
-/***/ },
-/* 246 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.default = {
-	  position: 'absolute',
-	  width: '1px',
-	  height: '1px',
-	  padding: '0px',
-	  margin: '-1px',
-	  overflow: 'hidden',
-	  clip: 'rect(0px, 0px, 0px, 0px)',
-	  border: '0px'
-	};
-	module.exports = exports['default'];
 
 /***/ },
 /* 247 */
@@ -28144,35 +28146,43 @@
 	    var year = this.props.params.year;
 	    var yearData = data[year];
 	    return _react2.default.createElement(
-	      "ul",
+	      "div",
 	      null,
 	      _react2.default.createElement(
 	        "h2",
-	        null,
+	        { className: "results__heading" },
 	        yearData.summary
 	      ),
-	      yearData.videos.map(function (video, i) {
-	        return _react2.default.createElement(
-	          "li",
-	          { key: i },
-	          _react2.default.createElement(
-	            "a",
-	            { href: video.youtubeURL },
-	            _react2.default.createElement("img", { src: video.imageURL,
-	              className: "video__image" })
-	          ),
-	          _react2.default.createElement(
-	            "h3",
-	            { className: "video__title__search" },
-	            video.title
-	          ),
-	          _react2.default.createElement(
-	            "p",
-	            { className: "video__details__search" },
-	            video.description
-	          )
-	        );
-	      })
+	      _react2.default.createElement(
+	        "ul",
+	        { className: "video__ul" },
+	        yearData.videos.map(function (video, i) {
+	          return _react2.default.createElement(
+	            "div",
+	            { className: "video__found" },
+	            _react2.default.createElement(
+	              "li",
+	              { key: i },
+	              _react2.default.createElement(
+	                "a",
+	                { href: video.youtubeURL },
+	                _react2.default.createElement("img", { src: video.imageURL,
+	                  className: "video__image" })
+	              ),
+	              _react2.default.createElement(
+	                "h3",
+	                { className: "video__title__search" },
+	                video.title
+	              ),
+	              _react2.default.createElement(
+	                "p",
+	                { className: "video__details__search" },
+	                video.description
+	              )
+	            )
+	          );
+	        })
+	      )
 	    );
 	  }
 	});

@@ -76,7 +76,7 @@
 .details__div {
   display: inline-block;
   margin: 0;
-  margin-left: 102px;
+  margin-left: 130px;
   text-align: center;
   vertical-align: top;
   width: 150px;
@@ -150,8 +150,7 @@
 
 .nav__bar {
   background-color: white;
-  height: 40px;
-  padding: 9px 20px;
+  padding: 0;
 }
 
 .nav__link {
@@ -233,7 +232,7 @@
 
 .up__next__img {
   display: inline-block;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   margin-top: 5px;
   width: 150px;
 }
@@ -255,7 +254,7 @@
 .video {
   display: inline-block;
   height: 385px;
-  width: 678px;
+  width: 720px;
 }
 
 .video__cat__photo {
@@ -295,7 +294,7 @@
   margin: 0;
   padding-left: 0;
   padding-right: 0;
-  width: 678px;
+  width: 720px;
 }
 
 .video__subscribe__button {

@@ -39,31 +39,30 @@ export default React.createClass({
         fbUpdateUser(currentUser)
 
         fbWhenUserUpdated(authUser.uid, (snapshot) => {
-        // This sets up a callback once firebase reports that /users/{user.uid} has a value
           var snapshotReturn = snapshot.val()
           this.setState({
             user: {
               authed: true,
               name: snapshotReturn.name,
               email: snapshotReturn.email,
-              picture: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRScfj8VzfB-pB3jQxbn0NXS2qQy-D07gsplccAE4F_XK17i-9rdA",
+              picture: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRScfj8VzfB-pB3jQxbn0NXS2qQy-D07gsplccAE4F_XK17i-9rdA',
               lastLogin: snapshotReturn.lastLogin
             }
           });
         });
     }
-    else { // signed out or something went wrong
+    else {
       console.log("LOGGED OUT")
     }
   })
 
   },
   signUserIn() {
+    console.log("signUserIn");
     fbSignInWithRedirect()
   },
   signUserOut() {
     fbSetupSignoutCallback(() => {
-      //FIXME: Don't repeat myself from getInitialState()
       this.setState({
         user: {
           authed: false,
