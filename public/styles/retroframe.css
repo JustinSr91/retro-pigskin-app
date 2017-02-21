@@ -254,7 +254,7 @@
 .video {
   display: inline-block;
   height: 385px;
-  width: 720px;
+  width: 780px;
 }
 
 .video__cat__photo {
@@ -294,7 +294,7 @@
   margin: 0;
   padding-left: 0;
   padding-right: 0;
-  width: 720px;
+  width: 780px;
 }
 
 .video__subscribe__button {

@@ -36,8 +36,9 @@ export default React.createClass({
            <img src="flags/cowboysflag.jpg" className="flag"></img>
            <img src="flags/giantsflag.jpg" className="flag"></img>
            <img src="flags/packersflag.jpg" className="flag"></img>
-           <img src="flags/patriotsflag.jpg" className="flag"></img>
            <img src="flags/lionsflag.jpg" className="flag"></img>
+           <img src="flags/steelersflag.jpg" className="flag"></img>
+           <img src="flags/jetsflag.jpg" className="flag"></img>
           </div>
           <div className="div__video">
             <iframe width="560"

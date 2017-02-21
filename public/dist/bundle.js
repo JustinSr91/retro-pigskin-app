@@ -27979,8 +27979,9 @@
 	        _react2.default.createElement('img', { src: 'flags/cowboysflag.jpg', className: 'flag' }),
 	        _react2.default.createElement('img', { src: 'flags/giantsflag.jpg', className: 'flag' }),
 	        _react2.default.createElement('img', { src: 'flags/packersflag.jpg', className: 'flag' }),
-	        _react2.default.createElement('img', { src: 'flags/patriotsflag.jpg', className: 'flag' }),
-	        _react2.default.createElement('img', { src: 'flags/lionsflag.jpg', className: 'flag' })
+	        _react2.default.createElement('img', { src: 'flags/lionsflag.jpg', className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/steelersflag.jpg', className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/jetsflag.jpg', className: 'flag' })
 	      ),
 	      _react2.default.createElement(
 	        'div',

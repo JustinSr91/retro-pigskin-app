@@ -258,9 +258,8 @@ header {
 }
 
 .app-title {
-  display: inherit;
   margin-left: 0;
-  margin: 11px 0 0 5px;
+  margin: 19px 0 0 0;
 }
 
 .app-title-div {
@@ -408,10 +407,9 @@ header {
 }
 
 .flag {
-  margin-left: 15px;
-  margin-right: 5px;
+  margin-right: 10px;
   padding-top: 5px;
-  width: 130px;
+  width: 120px;
 }
 
 .flag__container {
@@ -421,8 +419,10 @@ header {
   border-bottom-width: 2px;
   display: inline-block;
   margin-bottom: 5px;
-  padding-left: 4px;
+  padding-left: 50px;
   width: 100%;
+  -webkit-filter: grayscale(0.1) saturate(1) sepia(0.6);/* Webkit vendor */
+  filter: grayscale(0.1) saturate(1) sepia(0.6);
 }
 
 .full__body {
@@ -448,9 +448,10 @@ header {
 
 .icon__helmet {
   display: inline-block;
-  height: 34px;
+  height: 40px;
+  margin-top: 4px;
   vertical-align: baseline;
-  width: 50px;
+  width: 56px;
 }
 
 .img__aside {
@@ -492,7 +493,6 @@ header {
 .nav__currentUserImage {
   width: 58px;
   height: 35px;
-  margin-top: 3px;
 }
 
 .nav__bar {
@@ -507,8 +507,9 @@ header {
   color: darkred;
   display: inline-flex;
   margin-left: 10px;
+  margin-top: -16px;
   text-decoration: none;
-  vertical-align: super;
+  vertical-align: middle;
 }
 
 .nav__signIn {
@@ -516,6 +517,7 @@ header {
   border-radius: 0.4rem;
   color: rgb(245, 245, 245);
   display: inline-block;
+  margin-top: 6px;
   padding: 0.3rem 1rem;
   position: absolute;
   top: 1rem;
@@ -535,6 +537,7 @@ header {
   border-radius: 0.4rem;
   color: rgb(245, 245, 245);
   display: inline-block;
+  margin-top: 5px;
   padding: 0.5rem 1rem;
   position: absolute;
   top: 0.8rem;
@@ -650,6 +653,9 @@ header {
   display: inline-block;
   float: right;
   height: 38px;
+  margin-top: 8px;
+  -webkit-filter: grayscale(0.1) saturate(1) sepia(0.6);/* Webkit vendor */
+  filter: grayscale(0.1) saturate(1) sepia(0.6);
 }
 
 .username__freestyler {
