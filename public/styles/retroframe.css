@@ -23,7 +23,7 @@
 
 .aside__user {
   color: rgb(85, 85, 85);
-  display: table-cell;
+  display: inline-block;
   font-size: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -76,7 +76,8 @@
 .details__div {
   display: inline-block;
   margin: 0;
-  margin-left: 10px;
+  margin-left: 102px;
+  text-align: center;
   vertical-align: top;
   width: 150px;
 }
@@ -275,18 +276,20 @@
 }
 
 .video__movie__title {
+  color: black;
   display: table;
   font-size: medium;
   margin-bottom: 0;
   margin-left: 10px;
   margin-top: 10px;
-  width: 250px;
+  width: 400px;
 }
 
 .video__section {
   background-color: white;
-  border-bottom-style: groove;
-  border-bottom-width: thin;
+  border-color: darkred;
+  border-style: ridge;
+  border-width: 3px;
   display: inline-block;
   height: 98px;
   margin: 0;

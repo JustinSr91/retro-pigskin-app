@@ -26926,14 +26926,6 @@
 	        ' Search '
 	      ),
 	      _react2.default.createElement(
-	        'form',
-	        { className: 'search__form',
-	          action: '#/search',
-	          method: 'get' },
-	        _react2.default.createElement('input', { className: 'search__text',
-	          type: 'text' })
-	      ),
-	      _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement('img', { ref: 'userImage', className: 'nav__currentUserImage', src: this.props.user.picture }),
@@ -27849,6 +27841,18 @@
 	          'aside',
 	          { className: 'element__aside' },
 	          _react2.default.createElement(
+	            'div',
+	            { className: 'flag__container' },
+	            _react2.default.createElement('img', { src: 'flags/49ersflag.jpg', className: 'flag' }),
+	            _react2.default.createElement('img', { src: 'flags/bengalsflag.jpg', className: 'flag' }),
+	            _react2.default.createElement('img', { src: 'flags/broncosflag.jpg', className: 'flag' }),
+	            _react2.default.createElement('img', { src: 'flags/cowboysflag.jpg', className: 'flag' }),
+	            _react2.default.createElement('img', { src: 'flags/giantsflag.jpg', className: 'flag' }),
+	            _react2.default.createElement('img', { src: 'flags/packersflag.jpg', className: 'flag' }),
+	            _react2.default.createElement('img', { src: 'flags/patriotsflag.jpg', className: 'flag' }),
+	            _react2.default.createElement('img', { src: 'flags/lionsflag.jpg', className: 'flag' })
+	          ),
+	          _react2.default.createElement(
 	            'h2',
 	            { className: 'aside__title' },
 	            'More Games'
@@ -27959,45 +27963,6 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'cat__hat__div' },
-	          _react2.default.createElement(
-	            'a',
-	            { href: '#' },
-	            _react2.default.createElement('img', { src: 'assets/user.jpg',
-	              alt: 'upload profile image',
-	              className: 'video__cat__photo' })
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'subscribe__div' },
-	          _react2.default.createElement(
-	            'p',
-	            { className: 'username__freestyler' },
-	            'Freestyler 365'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'subscribe__group' },
-	            _react2.default.createElement(
-	              'a',
-	              { href: '#' },
-	              _react2.default.createElement(
-	                'button',
-	                { className: 'video__subscribe__button' },
-	                'Subscribe'
-	              )
-	            )
-	          )
-	        ),
-	        _react2.default.createElement('div', { className: 'view__div' }),
-	        _react2.default.createElement('div', { className: 'options__bar' })
-	      ),
-	      _react2.default.createElement(
-	        'section',
-	        { className: 'video__description' },
-	        _react2.default.createElement(
-	          'div',
 	          { className: 'hideDetails', ref: 'hiddenText' },
 	          'Cowboys 2-2 Eagles 4-1. October 8, 2006.'
 	        ),
@@ -28006,7 +27971,8 @@
 	          { type: 'button', className: 'transition__button',
 	            onClick: this.toggleText },
 	          this.state.expanded ? "SHOW LESS" : "SHOW MORE"
-	        )
+	        ),
+	        _react2.default.createElement('div', { className: 'view__div' })
 	      ),
 	      _react2.default.createElement('section', { className: 'comments__section' })
 	    );

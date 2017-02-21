@@ -114,8 +114,7 @@ h2 {
 .showDetails {
   display: table;
   font-size: 14px;
-  margin: 0 auto 0 auto;
-  padding-bottom: 10px;
+  margin: 10px auto 0 auto;
   text-align: center;
   width: 300px;
 }
@@ -125,6 +124,7 @@ h2 {
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
   width: 50%;
   background: white;
   border: none;
@@ -401,7 +401,6 @@ header {
   display: inline-block;
   float: right;
   height: 900px;
-  margin-top: 5px;
   width: 350px;
 }
 
@@ -440,6 +439,18 @@ header {
   text-align: center;
   width: 60px;
 }
+
+.flag {
+  margin-right: 11px;
+  width: 75px;
+}
+
+.flag__container {
+  background-color: white;
+  display: inline-block;
+  width: 100%;
+}
+
 .full__body {
   background-color: rgb(241, 241, 241);
   margin: 0;
@@ -492,7 +503,9 @@ header {
 
 .nav__bar {
   background-color: white;
+  border-color: darkred;
   border-style: ridge;
+  border-width: 3px;
   height: 40px;
   padding: 9px 20px;
 }

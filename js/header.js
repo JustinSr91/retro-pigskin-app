@@ -20,13 +20,6 @@ export default React.createClass({
         </header>
           <Link to="/" className="nav__Link"> Home </Link>
           <Link to="/search" className="nav__Link"> Search </Link>
-            <form className="search__form"
-                  action="#/search"
-                  method="get">
-                  <input className="search__text"
-                         type="text">
-                  </input>
-            </form>
             <div>
               <img ref="userImage" className="nav__currentUserImage" src={this.props.user.picture}>
               </img>

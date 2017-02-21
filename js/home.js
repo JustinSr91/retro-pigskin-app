@@ -39,6 +39,16 @@ export default React.createClass({
           </div>
           <div className="div__aside">
             <aside className="element__aside">
+                 <div className="flag__container">
+                  <img src="flags/49ersflag.jpg" className="flag"></img>
+                  <img src="flags/bengalsflag.jpg" className="flag"></img>
+                  <img src="flags/broncosflag.jpg" className="flag"></img>
+                  <img src="flags/cowboysflag.jpg" className="flag"></img>
+                  <img src="flags/giantsflag.jpg" className="flag"></img>
+                  <img src="flags/packersflag.jpg" className="flag"></img>
+                  <img src="flags/patriotsflag.jpg" className="flag"></img>
+                  <img src="flags/lionsflag.jpg" className="flag"></img>
+                 </div>
                  <h2 className="aside__title">
                      More Games
                  </h2>
@@ -113,42 +123,15 @@ export default React.createClass({
                 2006 NFC Divisional Matchup - Cowboys vs Eagles
             </h2>
           </a>
-              <div className="cat__hat__div">
-                 <a href="#">
-                 <img src="assets/user.jpg"
-                      alt="upload profile image"
-                      className="video__cat__photo"/>
-                 </a>
-              </div>
-
-
-              <div className="subscribe__div">
-                <p className="username__freestyler">
-                   Freestyler 365
-                </p>
-                <div className="subscribe__group">
-                  <a href="#">
-                     <button className="video__subscribe__button">
-                             Subscribe
-                     </button>
-                  </a>
-                </div>
-              </div>
-
-              <div className="view__div">
-              </div>
-              <div className="options__bar">
-              </div>
-         </div>
-
-         <section className="video__description">
           <div className="hideDetails" ref="hiddenText">
                Cowboys 2-2 Eagles 4-1. October 8, 2006.
           </div>
-            <button type="button" className="transition__button"
-                    onClick={this.toggleText}>{this.state.expanded ? "SHOW LESS" : "SHOW MORE"}
-            </button>
-         </section>
+          <button type="button" className="transition__button"
+                  onClick={this.toggleText}>{this.state.expanded ? "SHOW LESS" : "SHOW MORE"}
+          </button>
+              <div className="view__div">
+              </div>
+          </div>
          <section className="comments__section">
          </section>
        </section>
