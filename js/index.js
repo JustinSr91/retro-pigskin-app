@@ -112,7 +112,7 @@ var data = {
       {
         youtubeURL: 'https://youtu.be/jpa4LI2gifk',
         imageURL: "/styles/Eagles-Rams2001.jpg",
-        title: 'Eagles vs Rams 2001',
+        title: 'Eagles vs Rams',
         description: '2001 NFC Championship Game | Full Game'
       },
       {

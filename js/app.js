@@ -72,14 +72,16 @@ export default React.createClass({
           lastLogin: undefined
         }
       })
-    })
+    });
+    this.refs.userImage.className = 'nav__currentUserImage__hidden';
   },
   render() {
     return (
       <section>
         <Header user={this.state.user}
                 signUserIn={this.signUserIn}
-                signUserOut={this.signUserOut}/>
+                signUserOut={this.signUserOut}
+                picture={this.state.user.picture}/>
         {this.props.children && React.cloneElement(this.props.children,
                   { user: this.state.user })}
         <Footer />

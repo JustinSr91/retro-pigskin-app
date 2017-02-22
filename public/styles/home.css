@@ -1,104 +1,3 @@
-/*a {
-  text-decoration: none;
-}
-
-.content__bundle {
-  padding-right: 25px;
-}
-
-.details__container {
-  display: block;
-  margin-left: 50px;
-  vertical-align: top;
-}
-
-.fa-play {
-  background-color: rgba(20, 20, 20, 0.8);
-  border-radius: 6px;
-  color: white;
-  content: "\f04b";
-  margin-left: 43px;
-  margin-top: 43px;
-  padding-left: 6px;
-  position: absolute;
-  text-align: center;
-  width: 60px;
-}
-
-.group__link {
-  text-decoration: none;
-}
-
-.g-signin2 {
-
-}
-
-h2 {
-  font-size: 18px;
-}
-
-.header {
-  color: darkred;
-  display: inline-block;
-  margin-right: 30px;
-  text-align: left;
-}
-
-.headerText {
-  margin-left: 20px;
-}
-
-.image__container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 120px;
-}
-
-.image__streamer {
-  background: rgba(44, 62, 80,.8);
-  color: #FB9B2A;
-  display: block;
-  font-size: 40px;
-  margin-left: 232px;
-  margin-right: auto;
-  margin-top: 30px;
-  padding-top: 100px;
-  padding-bottom: 105px;
-  position: absolute;
-  text-align: center;
-  width: 500px;
-}
-
-.main__container {
-  background: white;
-  border-color: #FB9B2A;
-  border-left-style: ridge;
-  border-right-style: ridge;
-  border-width: 1px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
-  width: 600px;
-}
-
-.mainVideo__details {
-  display: table;
-  font-size: 14px;
-  margin: 0 auto 0 auto;
-  padding-bottom: 10px;
-  text-align: center;
-  width: 300px;
-}
-
-.mainVideo__title {
-  color: darkred;
-  display: table;
-  font-size: 18px;
-  margin: 10px auto 10px auto;
-  text-align: center;
-  width: 300px;
-}
-
 /* Read More Dropdown */
 .hideDetails {
   display: none;
@@ -126,120 +25,7 @@ h2 {
   border-width: 2px;
 }
 
-/**/
-/*.movie {
-  border: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 550px;
-}
-
-nav {
-  color: darkred;
-  border-bottom-style: ridge;
-  border-bottom-width: 1px;
-  border-color: #FB9B2A;
-  height: 40px;
-}
-
-.nav__currentUser {
-  color: rgb(245, 245, 245);
-  display: inline-block;
-  position: absolute;
-  top: 1.5rem;
-  right: 9rem;
-}
-
-.nav__currentUserImage {
-  border: transparent;
-  border-radius: 50%;
-  position: absolute;
-  top: 1rem;
-  right: 6.5rem;
-  width: 2rem;
-}
-
-/*.navSignIn {
-  font-size: 14px;
-  text-decoration: none;
-  color: #FB9B2A;
-}*/
-
-/*.results__summary {
-
-}
-
-
-.secondary__container {
-  background: white;
-  border-color: #FB9B2A;
-  border-style: ridge;
-  border-width: 1px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
-  width: 300px;
-}
-
-.super-crazy-colors{
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-}
-
-.tagline {
-  margin: 0;
-  padding-top: 19px;
-  text-align: center;
-}
-
-.tagline__title {
-  background: white;
-  color: #FB9B2A;
-  display: block;
-  font-size: 18px;
-  font-weight: 100;
-  margin: 0 auto;
-  padding-bottom: 15px;
-  text-align: center;
-  width: 300px;
-}
-
-.title__section {
-  background: rgb(241, 241, 241);
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.userLogOutButton{}
-
-.video__details {
-  font-size: 14px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  padding-right: 20px;
-  text-align: center;
-  width: 180px;
-}
-
-.video__title {
-  color: #FB9B2A;
-  display: block;
-  font-size: 14px;
-  font-weight: 100;
-  margin: 10px auto 2px auto;
-  padding-right: 20px;
-  text-align: center;
-  vertical-align: top;
-  width: 150px;
-}
-
-*/
 /* NEW CONTENT  */
-
 
 * {
   box-sizing: border-box;
@@ -453,11 +239,6 @@ header {
   width: 100%;
 }
 
-.full__body {
-  background-color: rgb(241, 241, 241);
-  margin: 0;
-}
-
 .game__year {
   color: #FB9B2A;
   list-style: none;
@@ -505,12 +286,6 @@ header {
   text-decoration: none;
 }
 
-.logo__youtube {
-  display:inline-block;
-  margin-top: -9px;
-  width: 60px;
-}
-
 .main {
   background-color: rgb(241, 241, 241);
   display: inline-block;
@@ -519,17 +294,22 @@ header {
   width: 678px;
 }
 
-.nav__currentUserImage {
-  width: 58px;
-  height: 35px;
-}
-
 .nav__bar {
   background-color: white;
   border-color: darkred;
   border-style: ridge;
   border-width: 3px;
   padding: 0;
+}
+
+.nav__currentUserImage {
+  width: 58px;
+  height: 35px;
+}
+
+.nav__currentUserImage__hidden {
+  display: none;
+  visibility: hidden;
 }
 
 .nav__Link {
@@ -541,6 +321,7 @@ header {
   vertical-align: middle;
 }
 
+/* user sign in */
 .nav__signIn {
   background-color: darkred;
   border-radius: 0.4rem;
@@ -574,17 +355,7 @@ header {
   transition: color 0.6s, background-color 0.6s;
 }
 .nav__signout--hide {
-  display: none;
-}
-
-.options__bar {
-  background-color: white;
-  display: inline-flex;
-  height: 45px;
-  margin-top: 3px;
-  padding-left: 10px;
-  text-align: center;
-  width: 678px;
+  visibility: hidden;
 }
 
 .results__heading {
@@ -594,13 +365,6 @@ header {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-}
-
-.search__form {
-  border-color: black;
-  display: inline-block;
-  margin-left: 85px;
-  vertical-align: top;
 }
 
 .search__heading {
@@ -613,21 +377,6 @@ header {
   margin-left: auto;
   margin-right: auto;
   width: 500px;
-}
-
-/* Nav search bar */
-.search__submit,
-.search__text {
-  display:inline-block;
-  height: 21px;
-}
-
-.search__submit {
-  background-color: rgb(249,249,249);
-  border: 5px;
-  border-color: rgb(225, 225, 225);
-  padding: 3px;
-  width: 52px;
 }
 
 .search__text {
@@ -654,22 +403,6 @@ header {
   text-align: center;
 }
 
-.subscribe__div {
-  display: inline-table;
-  width: 150px;
-}
-
-.subscribe__group {
-  display: inline-flex;
-  width: 100px;
-}
-
-.subscription__count {
-  font-size: 10px;
-  text-align: center;
-  width: 30px;
-}
-
 .up__next__img {
   display: inline-block;
   margin-bottom: 5px;
@@ -687,15 +420,6 @@ header {
   filter: grayscale(0.1) saturate(1) sepia(0.6);
 }
 
-.username__freestyler {
-  color: rgb(85, 85, 85);
-  display: inline;
-  font-size: 13px;
-  font-weight: 600;
-  vertical-align: top;
-  width: 180px;
-}
-
 .video {
   border-color: darkred;
   border-style: groove;
@@ -703,13 +427,6 @@ header {
   display: inline-block;
   height: 385px;
   width: 720px;
-}
-
-.video__cat__photo {
-  display: inline-block;
-  height: 40px;
-  vertical-align: top;
-  width: 40px;
 }
 
 .video__description {
@@ -742,18 +459,6 @@ header {
   padding-left: 0;
   padding-right: 0;
   width: 720px;
-}
-
-.video__subscribe__button {
-  background-color:red;
-  color: white;
-}
-
-.video__username__aside {
-  display: inline-block;
-  font-size: small;
-  margin: 0;
-  width: 600px;
 }
 
 .video__details__search {
@@ -800,25 +505,18 @@ header {
   padding: 0;
 }
 
-/* Video Views text */
-.video__views__count {
-  color: rgb(85, 85, 85);
-  display: inline-block;
-  float:right;
-  font-size: large;
-  font-weight: 500;
-  margin-bottom: 0;
-  margin-right: 15px;
-  margin-top: 0;
-}
-
 .yearContainer {
+  background-color: darkred;
   border-style: ridge;
-  border-color: darkred;
+  border-color: black;
   border-width: 3px;
   width: 500px;
   display: inline-block;
   padding-top: 40px;
   text-align: center;
   height: 250px;
+}
+
+.year__link {
+  color: black;
 }
