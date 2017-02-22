@@ -424,6 +424,18 @@ header {
   width: 60px;
 }
 
+.fa-play__results {
+  background-color: rgba(20, 20, 20, 0.8);
+  border-radius: 6px;
+  color: white;
+  content: "\f04b";
+  margin-left: 220px;
+  margin-top: 48px;
+  position: absolute;
+  text-align: center;
+  width: 60px;
+}
+
 .flag {
   margin-right: 10px;
   padding-top: 5px;

@@ -1,4 +1,5 @@
 import React from 'react'
+var FontAwesome = require('react-fontawesome');
 
 export default React.createClass({
   render() {
@@ -13,10 +14,17 @@ export default React.createClass({
                 return (
                   <div className="video__found">
                     <li key={i}>
-                      <a href={video.youtubeURL}>
-                        <img src={video.imageURL}
-                             className="video__image"/>
-                      </a>
+                      <div>
+                        <a href={video.youtubeURL}>
+                          <FontAwesome
+                            className='fa fa-play__results'
+                            name='fa fa-play'
+                            size='2x'>
+                          </FontAwesome>
+                          <img src={video.imageURL}
+                               className="video__image"/>
+                        </a>
+                      </div>
                       <h3 className="video__title__search">{video.title}
                       </h3>
                         <p className="video__details__search">

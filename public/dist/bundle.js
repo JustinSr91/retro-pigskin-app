@@ -28137,7 +28137,7 @@
 /* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -28149,44 +28149,54 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	var FontAwesome = __webpack_require__(242);
+	
 	exports.default = _react2.default.createClass({
-	  displayName: "searchresults",
+	  displayName: 'searchresults',
 	  render: function render() {
 	    var data = this.props.route.data;
 	    var year = this.props.params.year;
 	    var yearData = data[year];
 	    return _react2.default.createElement(
-	      "div",
+	      'div',
 	      null,
 	      _react2.default.createElement(
-	        "h2",
-	        { className: "results__heading" },
+	        'h2',
+	        { className: 'results__heading' },
 	        yearData.summary
 	      ),
 	      _react2.default.createElement(
-	        "ul",
-	        { className: "video__ul" },
+	        'ul',
+	        { className: 'video__ul' },
 	        yearData.videos.map(function (video, i) {
 	          return _react2.default.createElement(
-	            "div",
-	            { className: "video__found" },
+	            'div',
+	            { className: 'video__found' },
 	            _react2.default.createElement(
-	              "li",
+	              'li',
 	              { key: i },
 	              _react2.default.createElement(
-	                "a",
-	                { href: video.youtubeURL },
-	                _react2.default.createElement("img", { src: video.imageURL,
-	                  className: "video__image" })
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { href: video.youtubeURL },
+	                  _react2.default.createElement(FontAwesome, {
+	                    className: 'fa fa-play__results',
+	                    name: 'fa fa-play',
+	                    size: '2x' }),
+	                  _react2.default.createElement('img', { src: video.imageURL,
+	                    className: 'video__image' })
+	                )
 	              ),
 	              _react2.default.createElement(
-	                "h3",
-	                { className: "video__title__search" },
+	                'h3',
+	                { className: 'video__title__search' },
 	                video.title
 	              ),
 	              _react2.default.createElement(
-	                "p",
-	                { className: "video__details__search" },
+	                'p',
+	                { className: 'video__details__search' },
 	                video.description
 	              )
 	            )
