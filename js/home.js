@@ -132,7 +132,14 @@ export default React.createClass({
           </button>
               <div className="view__div">
               </div>
-          </div>
+        </div>
+        <section className="banner__container">
+          <img src="/banners/cowboys-sb-banner.jpg" className="banner"></img>
+          <img src="/banners/49ers-sb-banner.jpg" className="banner"></img>
+          <img src="/banners/jets-sb-banner.jpg" className="banner"></img>
+          <img src="/banners/pats-sb-banner.jpg" className="banner"></img>
+          <img src="/banners/rams-sb-banner99.jpg" className="banner"></img>
+        </section>
        </section>
     )
     }

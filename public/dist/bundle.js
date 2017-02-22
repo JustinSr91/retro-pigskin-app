@@ -28119,6 +28119,15 @@
 	          this.state.expanded ? "SHOW LESS" : "SHOW MORE"
 	        ),
 	        _react2.default.createElement('div', { className: 'view__div' })
+	      ),
+	      _react2.default.createElement(
+	        'section',
+	        { className: 'banner__container' },
+	        _react2.default.createElement('img', { src: '/banners/cowboys-sb-banner.jpg', className: 'banner' }),
+	        _react2.default.createElement('img', { src: '/banners/49ers-sb-banner.jpg', className: 'banner' }),
+	        _react2.default.createElement('img', { src: '/banners/jets-sb-banner.jpg', className: 'banner' }),
+	        _react2.default.createElement('img', { src: '/banners/pats-sb-banner.jpg', className: 'banner' }),
+	        _react2.default.createElement('img', { src: '/banners/rams-sb-banner99.jpg', className: 'banner' })
 	      )
 	    );
 	  }
