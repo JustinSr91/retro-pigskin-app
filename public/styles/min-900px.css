@@ -1,0 +1,89 @@
+@media (min-width: 900px) and (max-width: 1200px) {
+    .banner {
+      width: 100px;
+      display: inline;
+    }
+
+    .banner__container {
+      border-style: ridge;
+      border-color: darkred;
+      width: 60%;
+      margin-top: 19px;
+      padding-bottom: 15px;
+      padding-top: 20px;
+      display: inline-block;
+    }
+
+    .fa-play {
+      background-color: rgba(20, 20, 20, 0.8);
+      border-radius: 6px;
+      color: white;
+      content: "\f04b";
+      margin-left: 13%;
+      margin-top: 4px;
+      padding-left: 6px;
+      position: absolute;
+      text-align: center;
+      width: 60px;
+    }
+
+    .flag {
+      margin-right: 10px;
+      padding-top: 5px;
+      width: 80px;
+    }
+
+    .element__aside {
+      background-color: darkred;
+      border-color: darkred;
+      border-style: ridge;
+      border-width: 3px;
+      display: inline-block;
+      float: right;
+      height: 652px;
+      padding-top: 10px;
+      width: 33%;
+    }
+
+    .img__aside {
+      border-color: black;
+      border-style: ridge;
+      display: block;
+      height: 110px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 140px;
+    }
+
+  }
+
+  .details__div {
+    display: inline-block;
+    margin: 0;
+    margin-left: 19%;
+    text-align: center;
+    vertical-align: top;
+    width: 180px;
+  }
+
+  .video {
+    display: inline-block;
+    height: 385px;
+    width: 111%;
+  }
+
+  .video__section {
+    background-color: white;
+    border-color: darkred;
+    border-style: ridge;
+    border-width: 3px;
+    display: inline-block;
+    height: 98px;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 60%;
+  }
+
+}
+/* end of query */

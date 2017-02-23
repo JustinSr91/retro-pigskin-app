@@ -58,15 +58,15 @@
 	
 	var _app2 = _interopRequireDefault(_app);
 	
-	var _search = __webpack_require__(234);
+	var _search = __webpack_require__(245);
 	
 	var _search2 = _interopRequireDefault(_search);
 	
-	var _home = __webpack_require__(235);
+	var _home = __webpack_require__(246);
 	
 	var _home2 = _interopRequireDefault(_home);
 	
-	var _searchresults = __webpack_require__(244);
+	var _searchresults = __webpack_require__(247);
 	
 	var _searchresults2 = _interopRequireDefault(_searchresults);
 	
@@ -202,7 +202,7 @@
 	      title: 'Falcons vs Eagles',
 	      description: '2002 NFC Divisional Playoff Matchup | Full Game'
 	    }, {
-	      youtubeURL: 'https://youtu.be/UWPvuF1cjx0',
+	      youtubeURL: 'https://youtu.be/UWPvuF1cjx0?t=7m27s',
 	      imageURL: "/styles/Falcons-Packers2002.jpg",
 	      title: 'Falcons vs Packers',
 	      description: '2002 Wild Card Playoff Matchup | Full Game'
@@ -26765,19 +26765,19 @@
 	
 	var _reactRouter = __webpack_require__(178);
 	
-	var _header = __webpack_require__(245);
+	var _header = __webpack_require__(234);
 	
 	var _header2 = _interopRequireDefault(_header);
 	
-	var _footer = __webpack_require__(247);
+	var _footer = __webpack_require__(244);
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
-	var _firebase = __webpack_require__(236);
+	var _firebase = __webpack_require__(235);
 	
 	var _firebase2 = _interopRequireDefault(_firebase);
 	
-	var _fbAuth = __webpack_require__(246);
+	var _fbAuth = __webpack_require__(241);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -26884,36 +26884,72 @@
 	
 	var _reactRouter = __webpack_require__(178);
 	
+	var _firebase = __webpack_require__(235);
+	
+	var _firebase2 = _interopRequireDefault(_firebase);
+	
+	var _fbAuth = __webpack_require__(241);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	var FontAwesome = __webpack_require__(242);
+	
 	exports.default = _react2.default.createClass({
-	  displayName: 'search',
-	  getInitialState: function getInitialState() {
-	    return {};
+	  displayName: 'header',
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      user: { authed: false }
+	    };
 	  },
 	  render: function render() {
+	    var signoutButtonClass = this.props.user.authed ? "nav__signOut" : "nav__signout--hide";
 	    return _react2.default.createElement(
-	      'section',
-	      { className: 'search__section' },
+	      'nav',
+	      { className: 'nav__bar' },
 	      _react2.default.createElement(
-	        'h1',
-	        { className: 'search__heading' },
-	        ' Search Games by Year '
+	        'header',
+	        { className: 'header' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'app-title-div' },
+	          _react2.default.createElement('img', { src: '/styles/helmet-icon.jpg', className: 'icon__helmet' }),
+	          _react2.default.createElement(
+	            'h1',
+	            { className: 'app-title' },
+	            'Retro Pigskin'
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: '/', className: 'nav__Link' },
+	        ' Home '
+	      ),
+	      _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: '/search', className: 'nav__Link' },
+	        ' Search '
 	      ),
 	      _react2.default.createElement(
 	        'div',
-	        { className: 'yearContainer' },
-	        Object.keys(this.props.route.data).map(function (year, i) {
-	          return _react2.default.createElement(
-	            'div',
-	            { className: 'search__year', key: i },
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { className: 'year__link', to: "/Search/" + year },
-	              year
-	            )
-	          );
-	        })
+	        { className: 'user__group' },
+	        _react2.default.createElement('img', { ref: 'userImage', className: 'nav__currentUserImage', src: this.props.user.picture }),
+	        _react2.default.createElement(
+	          'button',
+	          { ref: 'userLogInButton',
+	            className: 'nav__signIn',
+	            onClick: this.props.signUserIn,
+	            'data-js': 'nav__signIn' },
+	          ' Log In'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { ref: 'userLogOutButton',
+	            className: signoutButtonClass,
+	            onClick: this.props.signUserOut,
+	            'data-js': 'nav__signOut' },
+	          ' Log Out'
+	        )
 	      )
 	    );
 	  }
@@ -26923,226 +26959,6 @@
 /* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(178);
-	
-	var _firebase = __webpack_require__(236);
-	
-	var _firebase2 = _interopRequireDefault(_firebase);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var FontAwesome = __webpack_require__(242);
-	
-	exports.default = _react2.default.createClass({
-	  displayName: 'home',
-	  getInitialState: function getInitialState() {
-	    return {
-	      text: "",
-	      expanded: false
-	    };
-	  },
-	  toggleText: function toggleText(e) {
-	    this.setState({
-	      expanded: !this.state.expanded
-	    });
-	    if (this.state.expanded) {
-	      this.refs.hiddenText.className = "hideDetails";
-	    } else {
-	      this.refs.hiddenText.className = "showDetails";
-	    }
-	  },
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'section',
-	      { className: 'container' },
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'flag__container' },
-	        _react2.default.createElement('img', { src: 'flags/49ersflag.jpg',
-	          className: 'flag' }),
-	        _react2.default.createElement('img', { src: 'flags/bengalsflag.jpg',
-	          className: 'flag' }),
-	        _react2.default.createElement('img', { src: 'flags/broncosflag.jpg',
-	          className: 'flag' }),
-	        _react2.default.createElement('img', { src: 'flags/cowboysflag.jpg',
-	          className: 'flag' }),
-	        _react2.default.createElement('img', { src: 'flags/giantsflag.jpg',
-	          className: 'flag' }),
-	        _react2.default.createElement('img', { src: 'flags/packersflag.jpg',
-	          className: 'flag' }),
-	        _react2.default.createElement('img', { src: 'flags/lionsflag.jpg',
-	          className: 'flag' }),
-	        _react2.default.createElement('img', { src: 'flags/steelersflag.jpg',
-	          className: 'flag' }),
-	        _react2.default.createElement('img', { src: 'flags/jetsflag.jpg',
-	          className: 'flag' })
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'div__video' },
-	        _react2.default.createElement('iframe', { width: '560',
-	          height: '315',
-	          className: 'video',
-	          src: 'https://www.youtube.com/embed/y_WryiWeGF0?rel=0',
-	          frameBorder: '0',
-	          allowFullScreen: true })
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'div__aside' },
-	        _react2.default.createElement(
-	          'aside',
-	          { className: 'element__aside' },
-	          _react2.default.createElement(
-	            'h2',
-	            { className: 'aside__title' },
-	            'More Games'
-	          ),
-	          _react2.default.createElement('p', { className: 'up__next__img' }),
-	          _react2.default.createElement(
-	            'a',
-	            { href: 'https://youtu.be/pcwsCS9nD3g',
-	              target: '_blank' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'image__container' },
-	              _react2.default.createElement(FontAwesome, {
-	                className: 'fa fa-play',
-	                name: 'fa fa-play',
-	                size: '2x' }),
-	              _react2.default.createElement('img', { className: 'img__aside',
-	                src: '/styles/Bucs-Rams2000.jpg' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'details__div' },
-	            _react2.default.createElement(
-	              'h3',
-	              { className: 'h3__details' },
-	              'Bucs vs Rams 2000'
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              { className: 'aside__user' },
-	              'Week 16 Matchup'
-	            )
-	          ),
-	          _react2.default.createElement('p', { className: 'up__next__img' }),
-	          _react2.default.createElement(
-	            'a',
-	            { href: 'https://youtu.be/UWPvuF1cjx0',
-	              target: '_blank' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'image__container' },
-	              _react2.default.createElement(FontAwesome, {
-	                className: 'fa fa-play',
-	                name: 'fa fa-play',
-	                size: '2x' }),
-	              _react2.default.createElement('img', { className: 'img__aside',
-	                src: '/styles/Falcons-Packers2002.jpg' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'details__div' },
-	            _react2.default.createElement(
-	              'h3',
-	              { className: 'h3__details' },
-	              'Falcons vs Packers 2002'
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              { className: 'aside__user' },
-	              'Wild Card playoff matchup'
-	            )
-	          ),
-	          _react2.default.createElement('p', { className: 'up__next__img' }),
-	          _react2.default.createElement(
-	            'a',
-	            { href: 'https://youtu.be/eoE0VLUz00o',
-	              target: '_blank' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'image__container' },
-	              _react2.default.createElement(FontAwesome, {
-	                className: 'fa fa-play',
-	                name: 'fa fa-play',
-	                size: '2x' }),
-	              _react2.default.createElement('img', { className: 'img__aside',
-	                src: '/styles/Titans-Bills1999.jpg' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'details__div' },
-	            _react2.default.createElement(
-	              'h3',
-	              { className: 'h3__details' },
-	              'Titans vs Bills 1999'
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              { className: 'aside__user' },
-	              'AFC Wild Card Game'
-	            )
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'video__section' },
-	        _react2.default.createElement(
-	          'a',
-	          { href: 'https://youtu.be/y_WryiWeGF0' },
-	          _react2.default.createElement(
-	            'h2',
-	            { className: 'video__movie__title' },
-	            '2006 NFC Divisional Matchup - Cowboys vs Eagles'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'hideDetails',
-	            ref: 'hiddenText' },
-	          'Cowboys 2-2 Eagles 4-1. October 8, 2006.'
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          { type: 'button',
-	            className: 'transition__button',
-	            onClick: this.toggleText },
-	          this.state.expanded ? "SHOW LESS" : "SHOW MORE"
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'section',
-	        { className: 'banner__container' },
-	        _react2.default.createElement('img', { src: '/banners/cowboys-sb-banner.jpg', className: 'banner' }),
-	        _react2.default.createElement('img', { src: '/banners/49ers-sb-banner.jpg', className: 'banner' }),
-	        _react2.default.createElement('img', { src: '/banners/jets-sb-banner.jpg', className: 'banner' }),
-	        _react2.default.createElement('img', { src: '/banners/pats-sb-banner.jpg', className: 'banner' }),
-	        _react2.default.createElement('img', { src: '/banners/rams-sb-banner99.jpg', className: 'banner' })
-	      )
-	    );
-	  }
-	});
-
-/***/ },
-/* 236 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/**
 	 *  Firebase libraries for browser - npm package.
 	 *
@@ -27150,16 +26966,16 @@
 	 *
 	 *   firebase = require('firebase');
 	 */
-	var firebase = __webpack_require__(237);
+	var firebase = __webpack_require__(236);
+	__webpack_require__(237);
 	__webpack_require__(238);
 	__webpack_require__(239);
 	__webpack_require__(240);
-	__webpack_require__(241);
 	module.exports = firebase;
 
 
 /***/ },
-/* 237 */
+/* 236 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {var firebase = (function(){
@@ -27198,10 +27014,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 238 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(237);
+	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(236);
 	(function(){
 	/*! @license Firebase v3.6.8
 	    Build: 3.6.8-rc.1
@@ -27446,10 +27262,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 239 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(237);
+	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(236);
 	(function(){
 	/*! @license Firebase v3.6.8
 	    Build: 3.6.8-rc.1
@@ -27717,10 +27533,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 240 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(237);
+	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(236);
 	(function(){
 	/*! @license Firebase v3.6.8
 	    Build: 3.6.8-rc.1
@@ -27778,10 +27594,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 241 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(237);
+	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(236);
 	(function(){
 	/*! @license Firebase v3.6.8
 	    Build: 3.6.8-rc.1
@@ -27822,6 +27638,54 @@
 	module.exports = firebase.messaging;
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 241 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.fbSignInWithRedirect = fbSignInWithRedirect;
+	exports.fbSetupSignoutCallback = fbSetupSignoutCallback;
+	exports.fbOnAuthStateChanged = fbOnAuthStateChanged;
+	exports.fbUpdateUser = fbUpdateUser;
+	exports.fbWhenUserUpdated = fbWhenUserUpdated;
+	var provider = new firebase.auth.GoogleAuthProvider();
+	
+	function fbSignInWithRedirect() {
+	  firebase.auth().signInWithRedirect(provider);
+	  firebase.auth().getRedirectResult().then(function (result) {
+	    if (result.credential) {
+	      var token = result.credential.accessToken;
+	    }
+	  }).catch(function (error) {
+	    var errorCode = error.code;
+	    var errorMessage = error.message;
+	    var email = error.email;
+	    var credential = error.credential;
+	    console.log("ERROR authenticating with firebase: " + errorMessage);
+	    //FIXME: Better logging/error handling
+	  });
+	}
+	
+	function fbSetupSignoutCallback(cb) {
+	  return firebase.auth().signOut().then(cb);
+	}
+	
+	function fbOnAuthStateChanged(cb) {
+	  return firebase.auth().onAuthStateChanged(cb);
+	}
+	
+	function fbUpdateUser(user) {
+	  firebase.database().ref().update(user);
+	}
+	
+	function fbWhenUserUpdated(uid, cb) {
+	  firebase.database().ref("/users/" + uid).once("value").then(cb);
+	}
 
 /***/ },
 /* 242 */
@@ -27969,6 +27833,306 @@
 /* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(178);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = _react2.default.createClass({
+	  displayName: "footer",
+	  render: function render() {
+	    return _react2.default.createElement(
+	      "section",
+	      null,
+	      _react2.default.createElement("footer", null)
+	    );
+	  }
+	});
+
+/***/ },
+/* 245 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(178);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = _react2.default.createClass({
+	  displayName: 'search',
+	  getInitialState: function getInitialState() {
+	    return {};
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'section',
+	      { className: 'search__section' },
+	      _react2.default.createElement(
+	        'h1',
+	        { className: 'search__heading' },
+	        ' Search Games by Year '
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'yearContainer' },
+	        Object.keys(this.props.route.data).map(function (year, i) {
+	          return _react2.default.createElement(
+	            'div',
+	            { className: 'search__year', key: i },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { className: 'year__link', to: "/Search/" + year },
+	              year
+	            )
+	          );
+	        })
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 246 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(178);
+	
+	var _firebase = __webpack_require__(235);
+	
+	var _firebase2 = _interopRequireDefault(_firebase);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var FontAwesome = __webpack_require__(242);
+	
+	exports.default = _react2.default.createClass({
+	  displayName: 'home',
+	  getInitialState: function getInitialState() {
+	    return {
+	      text: "",
+	      expanded: false
+	    };
+	  },
+	  toggleText: function toggleText(e) {
+	    this.setState({
+	      expanded: !this.state.expanded
+	    });
+	    if (this.state.expanded) {
+	      this.refs.hiddenText.className = "hideDetails";
+	    } else {
+	      this.refs.hiddenText.className = "showDetails";
+	    }
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'section',
+	      { className: 'container' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'flag__container' },
+	        _react2.default.createElement('img', { src: 'flags/49ersflag.jpg',
+	          className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/bengalsflag.jpg',
+	          className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/broncosflag.jpg',
+	          className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/cowboysflag.jpg',
+	          className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/giantsflag.jpg',
+	          className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/packersflag.jpg',
+	          className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/lionsflag.jpg',
+	          className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/steelersflag.jpg',
+	          className: 'flag' }),
+	        _react2.default.createElement('img', { src: 'flags/jetsflag.jpg',
+	          className: 'flag' })
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'div__video' },
+	        _react2.default.createElement('iframe', { width: '560',
+	          height: '315',
+	          className: 'video',
+	          src: 'https://www.youtube.com/embed/y_WryiWeGF0?rel=0',
+	          frameBorder: '0',
+	          allowFullScreen: true })
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'div__aside' },
+	        _react2.default.createElement(
+	          'aside',
+	          { className: 'element__aside' },
+	          _react2.default.createElement(
+	            'h2',
+	            { className: 'aside__title' },
+	            'More Games'
+	          ),
+	          _react2.default.createElement('p', { className: 'up__next__img' }),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://youtu.be/pcwsCS9nD3g',
+	              target: '_blank' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'image__container' },
+	              _react2.default.createElement(FontAwesome, {
+	                className: 'fa fa-play',
+	                name: 'fa fa-play',
+	                size: '2x' }),
+	              _react2.default.createElement('img', { className: 'img__aside',
+	                src: '/styles/Bucs-Rams2000.jpg' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'details__div' },
+	            _react2.default.createElement(
+	              'h3',
+	              { className: 'h3__details' },
+	              'Bucs vs Rams 2000'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              { className: 'aside__user' },
+	              'Week 16 Matchup'
+	            )
+	          ),
+	          _react2.default.createElement('p', { className: 'up__next__img' }),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://youtu.be/UWPvuF1cjx0',
+	              target: '_blank' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'image__container' },
+	              _react2.default.createElement(FontAwesome, {
+	                className: 'fa fa-play',
+	                name: 'fa fa-play',
+	                size: '2x' }),
+	              _react2.default.createElement('img', { className: 'img__aside',
+	                src: '/styles/Falcons-Packers2002.jpg' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'details__div' },
+	            _react2.default.createElement(
+	              'h3',
+	              { className: 'h3__details' },
+	              'Falcons vs Packers 2002'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              { className: 'aside__user' },
+	              'Wild Card playoff matchup'
+	            )
+	          ),
+	          _react2.default.createElement('p', { className: 'up__next__img' }),
+	          _react2.default.createElement(
+	            'a',
+	            { href: 'https://youtu.be/eoE0VLUz00o',
+	              target: '_blank' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'image__container' },
+	              _react2.default.createElement(FontAwesome, {
+	                className: 'fa fa-play',
+	                name: 'fa fa-play',
+	                size: '2x' }),
+	              _react2.default.createElement('img', { className: 'img__aside',
+	                src: '/styles/Titans-Bills1999.jpg' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'details__div' },
+	            _react2.default.createElement(
+	              'h3',
+	              { className: 'h3__details' },
+	              'Titans vs Bills 1999'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              { className: 'aside__user' },
+	              'AFC Wild Card Game'
+	            )
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'video__section' },
+	        _react2.default.createElement(
+	          'a',
+	          { href: 'https://youtu.be/y_WryiWeGF0' },
+	          _react2.default.createElement(
+	            'h2',
+	            { className: 'video__movie__title' },
+	            '2006 NFC Divisional Matchup - Cowboys vs Eagles'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'hideDetails',
+	            ref: 'hiddenText' },
+	          'Cowboys 2-2 Eagles 4-1. October 8, 2006.'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { type: 'button',
+	            className: 'transition__button',
+	            onClick: this.toggleText },
+	          this.state.expanded ? "SHOW LESS" : "SHOW MORE"
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'section',
+	        { className: 'banner__container' },
+	        _react2.default.createElement('img', { src: '/banners/cowboys-sb-banner.jpg', className: 'banner' }),
+	        _react2.default.createElement('img', { src: '/banners/49ers-sb-banner.jpg', className: 'banner' }),
+	        _react2.default.createElement('img', { src: '/banners/jets-sb-banner.jpg', className: 'banner' }),
+	        _react2.default.createElement('img', { src: '/banners/pats-sb-banner.jpg', className: 'banner' }),
+	        _react2.default.createElement('img', { src: '/banners/rams-sb-banner99.jpg', className: 'banner' })
+	      )
+	    );
+	  }
+	});
+
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -28035,170 +28199,6 @@
 	          );
 	        })
 	      )
-	    );
-	  }
-	});
-
-/***/ },
-/* 245 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(178);
-	
-	var _firebase = __webpack_require__(236);
-	
-	var _firebase2 = _interopRequireDefault(_firebase);
-	
-	var _fbAuth = __webpack_require__(246);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var FontAwesome = __webpack_require__(242);
-	
-	exports.default = _react2.default.createClass({
-	  displayName: 'header',
-	  getDefaultProps: function getDefaultProps() {
-	    return {
-	      user: { authed: false }
-	    };
-	  },
-	  render: function render() {
-	    var signoutButtonClass = this.props.user.authed ? "nav__signOut" : "nav__signout--hide";
-	    return _react2.default.createElement(
-	      'nav',
-	      { className: 'nav__bar' },
-	      _react2.default.createElement(
-	        'header',
-	        { className: 'header' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'app-title-div' },
-	          _react2.default.createElement('img', { src: '/styles/helmet-icon.jpg', className: 'icon__helmet' }),
-	          _react2.default.createElement(
-	            'h1',
-	            { className: 'app-title' },
-	            'Retro Pigskin'
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/', className: 'nav__Link' },
-	        ' Home '
-	      ),
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/search', className: 'nav__Link' },
-	        ' Search '
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'user__group' },
-	        _react2.default.createElement('img', { ref: 'userImage', className: 'nav__currentUserImage', src: this.props.user.picture }),
-	        _react2.default.createElement(
-	          'button',
-	          { ref: 'userLogInButton',
-	            className: 'nav__signIn',
-	            onClick: this.props.signUserIn,
-	            'data-js': 'nav__signIn' },
-	          ' Log In'
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          { ref: 'userLogOutButton',
-	            className: signoutButtonClass,
-	            onClick: this.props.signUserOut,
-	            'data-js': 'nav__signOut' },
-	          ' Log Out'
-	        )
-	      )
-	    );
-	  }
-	});
-
-/***/ },
-/* 246 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.fbSignInWithRedirect = fbSignInWithRedirect;
-	exports.fbSetupSignoutCallback = fbSetupSignoutCallback;
-	exports.fbOnAuthStateChanged = fbOnAuthStateChanged;
-	exports.fbUpdateUser = fbUpdateUser;
-	exports.fbWhenUserUpdated = fbWhenUserUpdated;
-	var provider = new firebase.auth.GoogleAuthProvider();
-	
-	function fbSignInWithRedirect() {
-	  firebase.auth().signInWithRedirect(provider);
-	  firebase.auth().getRedirectResult().then(function (result) {
-	    if (result.credential) {
-	      var token = result.credential.accessToken;
-	    }
-	  }).catch(function (error) {
-	    var errorCode = error.code;
-	    var errorMessage = error.message;
-	    var email = error.email;
-	    var credential = error.credential;
-	    console.log("ERROR authenticating with firebase: " + errorMessage);
-	    //FIXME: Better logging/error handling
-	  });
-	}
-	
-	function fbSetupSignoutCallback(cb) {
-	  return firebase.auth().signOut().then(cb);
-	}
-	
-	function fbOnAuthStateChanged(cb) {
-	  return firebase.auth().onAuthStateChanged(cb);
-	}
-	
-	function fbUpdateUser(user) {
-	  firebase.database().ref().update(user);
-	}
-	
-	function fbWhenUserUpdated(uid, cb) {
-	  firebase.database().ref("/users/" + uid).once("value").then(cb);
-	}
-
-/***/ },
-/* 247 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactRouter = __webpack_require__(178);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = _react2.default.createClass({
-	  displayName: "footer",
-	  render: function render() {
-	    return _react2.default.createElement(
-	      "section",
-	      null,
-	      _react2.default.createElement("footer", null)
 	    );
 	  }
 	});

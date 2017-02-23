@@ -163,7 +163,7 @@ var data = {
         description: '2002 NFC Divisional Playoff Matchup | Full Game'
       },
       {
-        youtubeURL: 'https://youtu.be/UWPvuF1cjx0',
+        youtubeURL: 'https://youtu.be/UWPvuF1cjx0?t=7m27s',
         imageURL: "/styles/Falcons-Packers2002.jpg",
         title: 'Falcons vs Packers',
         description: '2002 Wild Card Playoff Matchup | Full Game'
